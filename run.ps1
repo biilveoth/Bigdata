@@ -1,6 +1,6 @@
 param(
     [string]$HdfsPath = "/",
-    [string]$DfsUrl = "http://171.226.11.41:30091"
+    [string]$DfsUrl = "http://171.226.11.3:30091"
 )
 
 $ErrorActionPreference = "Stop"

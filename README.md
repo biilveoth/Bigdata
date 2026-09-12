@@ -18,7 +18,7 @@ Java MapReduce trên local
           |
           | HDFS RPC
           v
-171.226.11.41:30091
+171.226.11.3:30091
           |
           v
 Kubernetes Service hdfs-nodeport
@@ -29,8 +29,8 @@ HDFS NameNode:8020 → HDFS DataNode
 
 | Mục đích | Địa chỉ |
 |---|---|
-| HDFS RPC | `hdfs://171.226.11.41:30091` |
-| WebHDFS | `http://171.226.11.41:30092` |
+| HDFS RPC | `hdfs://171.226.11.3:30091` |
+| WebHDFS | `http://171.226.11.3:30092` |
 
 > Khi đọc hoặc ghi qua RPC, máy local phải kết nối được tới DataNode do NameNode
 > trả về. Nếu DataNode chỉ công bố hostname nội bộ Kubernetes, cần expose các

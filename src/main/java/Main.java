@@ -15,7 +15,7 @@ public class Main {
     public static void main(String[] args) {
         String dfsUrl = args.length > 0
                 ? args[0]
-                : envOrDefault("DFS_URL", "hdfs://171.226.11.41:30091");
+                : envOrDefault("DFS_URL", "hdfs://171.226.11.3:30091");
         String hdfsUri = toHadoopFileSystemUri(dfsUrl);
         String directory = args.length > 1 ? args[1] : "/";
 
@@ -55,7 +55,7 @@ public class Main {
 
     private static void loadHadoopConfiguration(Configuration configuration) {
         String configDirectory = System.getenv("HADOOP_CONF_DIR");
-        if (configDirectory == null || configDirectory.isBlank()) {
+        if (configDirectory == null || configDirectory.trim().isEmpty()) {
             return;
         }
 
@@ -72,7 +72,7 @@ public class Main {
 
     private static String envOrDefault(String name, String defaultValue) {
         String value = System.getenv(name);
-        return value == null || value.isBlank() ? defaultValue : value;
+        return value == null || value.trim().isEmpty() ? defaultValue : value;
     }
 
     private static String toHadoopFileSystemUri(String dfsUrl) {
