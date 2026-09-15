@@ -2,33 +2,39 @@ package com.example.hdfs;
 
 import com.example.iplog.IpLogAnalysisDriver;
 import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.fs.BlockLocation;
 import org.apache.hadoop.fs.FileStatus;
 import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
+import org.apache.hadoop.hdfs.web.SWebHdfsFileSystem;
+import org.apache.hadoop.hdfs.web.WebHdfsFileSystem;
 
+import java.io.IOException;
 import java.net.URI;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.time.Instant;
 import java.util.Arrays;
+import java.util.Locale;
 import java.util.stream.Stream;
 
 public final class HdfsFileLister {
 
     private static final String DEFAULT_HDFS_URI =
-            "hdfs://171.226.11.3:30091";
+            "webhdfs://171.226.11.41:30093";
 
     private HdfsFileLister() {
     }
 
     public static void main(String[] args) throws Exception {
-        // Không có tham số: list thư mục gốc HDFS.
+        configureWindowsHadoopHome();
+
         if (args.length == 0) {
             list(DEFAULT_HDFS_URI, "/");
             return;
         }
 
-        switch (args[0].toLowerCase()) {
+        switch (args[0].toLowerCase(Locale.ROOT)) {
             case "list":
                 runList(args);
                 break;
@@ -43,11 +49,10 @@ public final class HdfsFileLister {
 
             default:
                 // Hỗ trợ cách chạy cũ:
-                // hdfs://host:port /directory
-                if (args[0].startsWith("hdfs://")) {
-                    String directory = args.length > 1
-                            ? args[1]
-                            : "/";
+                // webhdfs://host:port /directory
+                if (isSupportedHdfsUri(args[0])) {
+                    String directory =
+                            args.length > 1 ? args[1] : "/";
 
                     list(args[0], directory);
                 } else {
@@ -57,35 +62,25 @@ public final class HdfsFileLister {
         }
     }
 
-    /**
-     * List file hoặc folder trên HDFS.
-     *
-     * Cú pháp:
-     * list [hdfs-uri] [hdfs-directory]
-     */
     private static void runList(String[] args) throws Exception {
         if (args.length > 3) {
             printUsage();
             System.exit(2);
         }
 
-        String hdfsUri = args.length > 1
-                ? args[1]
-                : DEFAULT_HDFS_URI;
+        String hdfsUri =
+                args.length > 1
+                        ? args[1]
+                        : DEFAULT_HDFS_URI;
 
-        String directory = args.length > 2
-                ? args[2]
-                : "/";
+        String directory =
+                args.length > 2
+                        ? args[2]
+                        : "/";
 
         list(hdfsUri, directory);
     }
 
-    /**
-     * Upload file hoặc folder local lên HDFS.
-     *
-     * Cú pháp:
-     * upload <hdfs-uri> <local-path> <hdfs-directory> [--overwrite]
-     */
     private static void runUpload(String[] args) throws Exception {
         boolean overwrite =
                 args.length > 1
@@ -93,33 +88,22 @@ public final class HdfsFileLister {
                         args[args.length - 1]
                 );
 
-        int argumentCount = overwrite
-                ? args.length - 1
-                : args.length;
+        int argumentCount =
+                overwrite ? args.length - 1 : args.length;
 
         if (argumentCount != 4) {
             printUsage();
             System.exit(2);
         }
 
-        String hdfsUri = args[1];
-        java.nio.file.Path localSource = Paths.get(args[2]);
-        Path hdfsDestination = new Path(args[3]);
-
         upload(
-                hdfsUri,
-                localSource,
-                hdfsDestination,
+                args[1],
+                Paths.get(args[2]),
+                new Path(args[3]),
                 overwrite
         );
     }
 
-    /**
-     * Chạy chương trình MapReduce phân tích log.
-     *
-     * Cú pháp:
-     * analyze [hdfs-uri] <input> <output> [--overwrite]
-     */
     private static void runAnalyze(String[] args) throws Exception {
         String[] analysisArguments =
                 Arrays.copyOfRange(args, 1, args.length);
@@ -135,11 +119,17 @@ public final class HdfsFileLister {
         Configuration configuration =
                 createConfiguration(hdfsUri);
 
+        /*
+         * Dùng newInstance thay vì get để chắc chắn không lấy lại
+         * WebHdfsFileSystem cũ từ cache.
+         */
         try (FileSystem fileSystem =
-                     FileSystem.get(
+                     FileSystem.newInstance(
                              URI.create(hdfsUri),
                              configuration
                      )) {
+
+            printFileSystem(fileSystem);
 
             Path path = new Path(directory);
 
@@ -160,11 +150,6 @@ public final class HdfsFileLister {
 
             FileStatus[] entries =
                     fileSystem.listStatus(path);
-
-            System.out.printf(
-                    "Connected to %s%n",
-                    fileSystem.getUri()
-            );
 
             System.out.printf(
                     "Listing %s (%d entries)%n",
@@ -205,10 +190,12 @@ public final class HdfsFileLister {
                 createConfiguration(hdfsUri);
 
         try (FileSystem fileSystem =
-                     FileSystem.get(
+                     FileSystem.newInstance(
                              URI.create(hdfsUri),
                              configuration
                      )) {
+
+            printFileSystem(fileSystem);
 
             if (!fileSystem.exists(hdfsDestination)) {
                 boolean created =
@@ -242,7 +229,7 @@ public final class HdfsFileLister {
                         uploadedCount,
                         skippedCount
                 );
-            } else {
+            } else if (Files.isDirectory(localSource)) {
                 uploadDirectory(
                         fileSystem,
                         localSource,
@@ -251,12 +238,12 @@ public final class HdfsFileLister {
                         uploadedCount,
                         skippedCount
                 );
+            } else {
+                throw new IllegalArgumentException(
+                        "Local path is not a regular file or directory: "
+                                + localSource.toAbsolutePath()
+                );
             }
-
-            System.out.printf(
-                    "Connected to %s%n",
-                    fileSystem.getUri()
-            );
 
             System.out.printf(
                     "Upload completed: %d uploaded, "
@@ -363,12 +350,73 @@ public final class HdfsFileLister {
         uploadedCount[0]++;
     }
 
+    /**
+     * Cấu hình filesystem client theo URI.
+     *
+     * Port 30093 là HttpFS gateway. Với Hadoop 2.7.7, HttpFS không
+     * hỗ trợ GET_BLOCK_LOCATIONS. Vì vậy webhdfs được ánh xạ sang
+     * class tương thích được khai báo phía dưới.
+     */
+    public static void configureFileSystemClient(
+            Configuration configuration,
+            String hdfsUri
+    ) {
+
+        URI uri = URI.create(hdfsUri);
+        String scheme = uri.getScheme();
+
+        if (scheme == null) {
+            throw new IllegalArgumentException(
+                    "HDFS URI does not contain a scheme: "
+                            + hdfsUri
+            );
+        }
+
+        configuration.set(
+                "fs.defaultFS",
+                hdfsUri
+        );
+
+        if ("webhdfs".equalsIgnoreCase(scheme)) {
+            configuration.set(
+                    "fs.webhdfs.impl",
+                    HttpFsCompatibleWebHdfsFileSystem
+                            .class
+                            .getName()
+            );
+
+            configuration.setBoolean(
+                    "fs.webhdfs.impl.disable.cache",
+                    true
+            );
+        } else if ("swebhdfs".equalsIgnoreCase(scheme)) {
+            configuration.set(
+                    "fs.swebhdfs.impl",
+                    HttpFsCompatibleSWebHdfsFileSystem
+                            .class
+                            .getName()
+            );
+
+            configuration.setBoolean(
+                    "fs.swebhdfs.impl.disable.cache",
+                    true
+            );
+        } else if (!"hdfs".equalsIgnoreCase(scheme)) {
+            throw new IllegalArgumentException(
+                    "Unsupported filesystem scheme: "
+                            + scheme
+            );
+        }
+    }
+
     private static Configuration createConfiguration(
             String hdfsUri
     ) {
-        if (!hdfsUri.startsWith("hdfs://")) {
+
+        if (!isSupportedHdfsUri(hdfsUri)) {
             throw new IllegalArgumentException(
-                    "HDFS URI must start with hdfs://: "
+                    "HDFS URI must start with hdfs://, "
+                            + "webhdfs:// or swebhdfs://: "
                             + hdfsUri
             );
         }
@@ -376,12 +424,16 @@ public final class HdfsFileLister {
         Configuration configuration =
                 new Configuration();
 
-        configuration.set(
-                "fs.defaultFS",
+        loadHadoopConfiguration(configuration);
+
+        /*
+         * Gọi sau loadHadoopConfiguration để cấu hình trong
+         * core-site.xml không ghi đè HttpFS client.
+         */
+        configureFileSystemClient(
+                configuration,
                 hdfsUri
         );
-
-        loadHadoopConfiguration(configuration);
 
         return configuration;
     }
@@ -389,6 +441,7 @@ public final class HdfsFileLister {
     private static void loadHadoopConfiguration(
             Configuration configuration
     ) {
+
         String configDirectory =
                 System.getenv("HADOOP_CONF_DIR");
 
@@ -408,6 +461,12 @@ public final class HdfsFileLister {
                 configDirectory,
                 "hdfs-site.xml"
         );
+
+        addIfPresent(
+                configuration,
+                configDirectory,
+                "mapred-site.xml"
+        );
     }
 
     private static void addIfPresent(
@@ -415,6 +474,7 @@ public final class HdfsFileLister {
             String directory,
             String fileName
     ) {
+
         java.nio.file.Path file =
                 Paths.get(directory, fileName);
 
@@ -423,6 +483,178 @@ public final class HdfsFileLister {
                     new Path(file.toUri())
             );
         }
+    }
+
+    private static void configureWindowsHadoopHome() {
+        String osName =
+                System.getProperty("os.name", "");
+
+        if (!osName.startsWith("Windows")) {
+            return;
+        }
+
+        String hadoopHome =
+                System.getProperty("hadoop.home.dir");
+
+        if (hadoopHome == null
+                || hadoopHome.trim().isEmpty()) {
+            hadoopHome =
+                    System.getenv("HADOOP_HOME");
+        }
+
+        if (hadoopHome == null
+                || hadoopHome.trim().isEmpty()) {
+            hadoopHome = "C:\\hadoop";
+        }
+
+        System.setProperty(
+                "hadoop.home.dir",
+                hadoopHome
+        );
+    }
+
+    private static void printFileSystem(
+            FileSystem fileSystem
+    ) {
+
+        System.out.printf(
+                "Connected to %s%n",
+                fileSystem.getUri()
+        );
+
+        System.out.printf(
+                "FileSystem implementation: %s%n",
+                fileSystem.getClass().getName()
+        );
+    }
+
+    private static boolean isSupportedHdfsUri(
+            String value
+    ) {
+
+        return value != null
+                && (
+                value.startsWith("hdfs://")
+                        || value.startsWith("webhdfs://")
+                        || value.startsWith("swebhdfs://")
+        );
+    }
+
+    /**
+     * WebHdfsFileSystem tương thích với HttpFS 2.7.7.
+     *
+     * HttpFS 2.7.7 không có operation GET_BLOCK_LOCATIONS.
+     * LocalJobRunner không cần vị trí DataNode thật vì mapper chạy
+     * trên máy local và đọc dữ liệu bằng HTTP.
+     */
+    public static final class HttpFsCompatibleWebHdfsFileSystem
+            extends WebHdfsFileSystem {
+
+        @Override
+        public BlockLocation[] getFileBlockLocations(
+                FileStatus file,
+                long start,
+                long length
+        ) throws IOException {
+
+            return syntheticBlockLocations(
+                    file,
+                    start,
+                    length
+            );
+        }
+
+        @Override
+        public BlockLocation[] getFileBlockLocations(
+                Path path,
+                long start,
+                long length
+        ) throws IOException {
+
+            return syntheticBlockLocations(
+                    getFileStatus(path),
+                    start,
+                    length
+            );
+        }
+    }
+
+    /**
+     * Phiên bản HTTPS tương ứng.
+     */
+    public static final class HttpFsCompatibleSWebHdfsFileSystem
+            extends SWebHdfsFileSystem {
+
+        @Override
+        public BlockLocation[] getFileBlockLocations(
+                FileStatus file,
+                long start,
+                long length
+        ) throws IOException {
+
+            return syntheticBlockLocations(
+                    file,
+                    start,
+                    length
+            );
+        }
+
+        @Override
+        public BlockLocation[] getFileBlockLocations(
+                Path path,
+                long start,
+                long length
+        ) throws IOException {
+
+            return syntheticBlockLocations(
+                    getFileStatus(path),
+                    start,
+                    length
+            );
+        }
+    }
+
+    /**
+     * Trả về block location logic thay vì gọi
+     * GET_BLOCK_LOCATIONS tới HttpFS.
+     */
+    private static BlockLocation[] syntheticBlockLocations(
+            FileStatus file,
+            long start,
+            long length
+    ) {
+
+        if (file == null) {
+            return null;
+        }
+
+        if (start < 0 || length < 0) {
+            throw new IllegalArgumentException(
+                    "Block location start and length "
+                            + "must be non-negative."
+            );
+        }
+
+        if (file.isDirectory()
+                || file.getLen() <= start
+                || length == 0) {
+            return new BlockLocation[0];
+        }
+
+        long effectiveLength =
+                Math.min(
+                        length,
+                        file.getLen() - start
+                );
+
+        return new BlockLocation[]{
+                new BlockLocation(
+                        new String[]{"localhost"},
+                        new String[]{"localhost"},
+                        start,
+                        effectiveLength
+                )
+        };
     }
 
     private static void printUsage() {
@@ -447,23 +679,33 @@ public final class HdfsFileLister {
         );
 
         System.err.println();
-
         System.err.println("Examples:");
 
         System.err.println(
-                "  list hdfs://171.226.11.3:30091 "
+                "  list "
+                        + "webhdfs://171.226.11.41:30093 "
                         + "/thaipd/ip-log/input"
         );
 
         System.err.println(
-                "  upload hdfs://171.226.11.3:30091 "
+                "  upload "
+                        + "webhdfs://171.226.11.41:30093 "
                         + "sample-data "
                         + "/thaipd/ip-log/input "
                         + "--overwrite"
         );
 
         System.err.println(
-                "  analyze hdfs://171.226.11.3:30091 "
+                "  analyze "
+                        + "webhdfs://171.226.11.41:30093 "
+                        + "/thaipd/ip-log/input "
+                        + "/thaipd/ip-log/output/run-01 "
+                        + "--overwrite"
+        );
+
+        System.err.println(
+                "  analyze "
+                        + "hdfs://hdfs-nodeport:8020 "
                         + "/thaipd/ip-log/input "
                         + "/thaipd/ip-log/output/run-01 "
                         + "--overwrite"
