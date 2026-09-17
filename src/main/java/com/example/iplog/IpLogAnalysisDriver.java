@@ -1,6 +1,7 @@
 package com.example.iplog;
 
 import com.example.hdfs.HdfsFileLister;
+import com.example.hdfs.LdapAuthenticator;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.conf.Configured;
 import org.apache.hadoop.fs.FileSystem;
@@ -49,6 +50,7 @@ public final class IpLogAnalysisDriver
 
     @Override
     public int run(String[] args) throws Exception {
+        LdapAuthenticator.authenticateFromEnvironment();
         Arguments arguments;
 
         try {

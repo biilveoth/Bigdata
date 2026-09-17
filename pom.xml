@@ -36,11 +36,6 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>org.apache.hadoop</groupId>
-            <artifactId>hadoop-hdfs-httpfs</artifactId>
-            <version>${hadoop.version}</version>
-        </dependency>
     </dependencies>
 
     <build>

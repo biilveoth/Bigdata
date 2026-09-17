@@ -27,6 +27,12 @@ public final class HdfsFileLister {
     }
 
     public static void main(String[] args) throws Exception {
+        // The analysis driver authenticates in run(), including direct ToolRunner calls.
+        if (args.length > 0 && "analyze".equalsIgnoreCase(args[0])) {
+            runAnalyze(args);
+            return;
+        }
+        LdapAuthenticator.authenticateFromEnvironment();
         configureWindowsHadoopHome();
 
         if (args.length == 0) {
@@ -41,10 +47,6 @@ public final class HdfsFileLister {
 
             case "upload":
                 runUpload(args);
-                break;
-
-            case "analyze":
-                runAnalyze(args);
                 break;
 
             default:

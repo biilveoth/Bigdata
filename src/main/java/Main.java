@@ -1,3 +1,4 @@
+import com.example.hdfs.LdapAuthenticator;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FileStatus;
 import org.apache.hadoop.fs.FileSystem;
@@ -12,7 +13,8 @@ public class Main {
     private Main() {
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
+        LdapAuthenticator.authenticateFromEnvironment();
         String dfsUrl = args.length > 0
                 ? args[0]
                 : envOrDefault("DFS_URL", "hdfs://171.226.11.3:30091");

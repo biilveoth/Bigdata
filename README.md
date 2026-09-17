@@ -1,5 +1,8 @@
 # Bài 10: Phân tích log IP bằng Hadoop MapReduce
 
+`HdfsFileLister` yêu cầu đăng nhập OpenLDAP qua StartTLS trước khi chạy.
+Xem [hướng dẫn cấu hình CA và đăng nhập](docs/LDAP.md) trước khi dùng các lệnh bên dưới.
+
 ## 1. Tổng quan
 
 Project đọc access log từ HDFS, đếm số lượt truy cập của từng địa chỉ IP và tìm
@@ -604,17 +607,26 @@ Maven Shade Plugin đóng gói executable fat JAR với Main-Class:
 
 ## 10. Cấu hình IntelliJ trên Windows
 
+
+### Program arguments
+
+    webhdfs://171.226.11.41:30093 /thaipd/ip-log/input /thaipd/ip-log/output/run-01 --overwrite
+
+Tải và giải nén folder hadoop vào ổ C
+
 ### Environment variables
 
 Trong Run → Edit Configurations → Environment variables:
 
-    HADOOP_USER_NAME=hadoop
-    HADOOP_HOME=C:\hadoop
-    HADOOP_CONF_DIR=C:\hadoop\etc\hadoop
+    HADOOP_HOME=C:\hadoop;
+    HADOOP_USER_NAME=hdfs;
+    LDAP_CA_CERT=C:\Users\"user đang dùng"\openldap-ca.crt;
+    LDAP_USERNAME=hadoop;
+    LDAP_PASSWORD=Hadoop@123
 
 Nếu nhập trên một dòng, dùng dấu chấm phẩy:
 
-    HADOOP_USER_NAME=hadoop;HADOOP_HOME=C:\hadoop;HADOOP_CONF_DIR=C:\hadoop\etc\hadoop
+    HADOOP_HOME=C:\hadoop;HADOOP_USER_NAME=hdfs;LDAP_CA_CERT=C:\Users\EnQue0\openldap-ca.crt;LDAP_USERNAME=hadoop;LDAP_PASSWORD=Hadoop@123
 
 Không dùng dấu phẩy để phân cách biến.
 
