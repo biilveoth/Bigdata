@@ -1,0 +1,33 @@
+Installation started: 2026-10-02T03:04:30Z
+Warning: openjdk@11 11.0.32.1 is already installed and up-to-date.
+To reinstall 11.0.32.1, run:
+  brew reinstall openjdk@11
+openjdk version "11.0.32.1" 2026-08-18
+OpenJDK Runtime Environment Homebrew (build 11.0.32.1+0)
+OpenJDK 64-Bit Server VM Homebrew (build 11.0.32.1+0, mixed mode)
+Hadoop 3.3.6
+Source code repository https://github.com/apache/hadoop.git -r 1be78238728da9266a4f88195058f08fd012bf9c
+Compiled by ubuntu on 2023-06-18T08:22Z
+Compiled on platform linux-x86_64
+Compiled with protoc 3.7.1
+From source with checksum 5652179ad55f76cb287d9c633bb53bbd
+This command was run using /Users/luan/Documents/DLL-Bigdata/.tools/hadoop-3.3.6/share/hadoop/common/hadoop-common-3.3.6.jar
+Installed at /Users/luan/Documents/DLL-Bigdata/.tools/hadoop-3.3.6
+Installation started: 2026-10-02T03:10:57Z
+Warning: openjdk@11 11.0.32.1 is already installed and up-to-date.
+To reinstall 11.0.32.1, run:
+  brew reinstall openjdk@11
+DOWNLOAD_URL=https://archive.apache.org/dist/hadoop/common/hadoop-3.3.6/hadoop-3.3.6.tar.gz
+SHA512=de3eaca2e0517e4b569a88b63c89fae19cb8ac6c01ff990f1ff8f0cc0f3128c8e8a23db01577ca562a0e0bb1b4a3889f8c74384e609cd55e537aada3dcaa9f8a
+ARCHIVE_VERIFICATION=PASS
+openjdk version "11.0.32.1" 2026-08-18
+OpenJDK Runtime Environment Homebrew (build 11.0.32.1+0)
+OpenJDK 64-Bit Server VM Homebrew (build 11.0.32.1+0, mixed mode)
+Hadoop 3.3.6
+Source code repository https://github.com/apache/hadoop.git -r 1be78238728da9266a4f88195058f08fd012bf9c
+Compiled by ubuntu on 2023-06-18T08:22Z
+Compiled on platform linux-x86_64
+Compiled with protoc 3.7.1
+From source with checksum 5652179ad55f76cb287d9c633bb53bbd
+This command was run using /Users/luan/Documents/DLL-Bigdata/.tools/hadoop-3.3.6/share/hadoop/common/hadoop-common-3.3.6.jar
+Installed at /Users/luan/Documents/DLL-Bigdata/.tools/hadoop-3.3.6

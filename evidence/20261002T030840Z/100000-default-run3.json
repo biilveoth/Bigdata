@@ -1,0 +1,46 @@
+{
+  "scenario": "100000-default",
+  "run": 3,
+  "input_records": 100000,
+  "map_matched": 50000,
+  "output_records": 25000,
+  "invalid_records": 20000,
+  "job_ms": 4538,
+  "process_seconds": 12.813162,
+  "verification": "PASS",
+  "output": "output/20261002T030840Z/100000-default-run3",
+  "rules": {
+    "min_amount": "500000",
+    "max_amount": "2000000",
+    "start_date": "2026-09-01",
+    "end_date": "2026-09-30",
+    "categories": "Electronics,Books",
+    "statuses": "COMPLETED",
+    "min_orders": 3,
+    "min_total": "3000000"
+  },
+  "metrics": {
+    "hadoop_version": "3.3.6",
+    "job_elapsed_ms": 4538,
+    "counters": {
+      "INPUT_RECORDS": 100000,
+      "HEADER_LINES": 1,
+      "EMPTY_LINES": 0,
+      "INVALID_RECORDS": 20000,
+      "MAP_MATCHED": 50000,
+      "MAP_REJECTED": 30000,
+      "CUSTOMERS_ACCEPTED": 5000,
+      "CUSTOMERS_REJECTED": 10000,
+      "OUTPUT_RECORDS": 25000,
+      "GROUP_REJECTED_RECORDS": 25000
+    }
+  },
+  "input_sha256": "f8cbfa086b97fc7fd7573b5f13cac5f0131df1d81b98f6ce912a7f6596f3d3fb",
+  "command": [
+    "/Users/luan/Documents/DLL-Bigdata/.tools/hadoop-3.3.6/bin/hadoop",
+    "jar",
+    "/Users/luan/Documents/DLL-Bigdata/target/conditional-filter-1.0.0.jar",
+    "/Users/luan/Documents/DLL-Bigdata/data/orders-100000.csv",
+    "/Users/luan/Documents/DLL-Bigdata/output/20261002T030840Z/100000-default-run3"
+  ]
+}

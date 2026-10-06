@@ -7,21 +7,25 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.example</groupId>
-    <artifactId>ip-log-analysis</artifactId>
+    <artifactId>conditional-filter</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
     <properties>
-        <!-- Pod Hadoop 2.7.7 đang chạy Java 8 -->
+        <!-- Application bytecode is compatible with Java 8 and later. -->
         <maven.compiler.release>8</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <!-- Đồng bộ với Hadoop trong container -->
-        <hadoop.version>2.7.7</hadoop.version>
+        <hadoop.version>3.3.6</hadoop.version>
         <junit.version>5.11.4</junit.version>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-csv</artifactId>
+            <version>1.10.0</version>
+        </dependency>
         <!-- HDFS client và MapReduce client -->
         <dependency>
             <groupId>org.apache.hadoop</groupId>
@@ -88,7 +92,7 @@
 
                                 <!-- Main class mặc định -->
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>com.example.hdfs.HdfsFileLister</mainClass>
+                                    <mainClass>com.example.filter.FilterDriver</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>

@@ -1,0 +1,11 @@
+{
+  "recorded_at_utc": "2026-10-02T03:04:41.388808+00:00",
+  "JAVA_HOME": "/opt/homebrew/opt/openjdk@11/libexec/openjdk.jdk/Contents/Home",
+  "HADOOP_HOME": "/Users/luan/Documents/DLL-Bigdata/.tools/hadoop-3.3.6",
+  "HADOOP_CONF_DIR": "/Users/luan/Documents/DLL-Bigdata/config/hadoop",
+  "java": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment Homebrew (build 11.0.32.1+0)\nOpenJDK 64-Bit Server VM Homebrew (build 11.0.32.1+0, mixed mode)\n",
+  "maven": "Apache Maven 3.9.16 (2bdd9fddda4b155ebf8000e807eb73fd829a51d5)\nMaven home: /opt/homebrew/Cellar/maven/3.9.16/libexec\nJava version: 11.0.32.1, vendor: Homebrew, runtime: /opt/homebrew/Cellar/openjdk@11/11.0.32.1/libexec/openjdk.jdk/Contents/Home\nDefault locale: vi_US, platform encoding: UTF-8\nOS name: \"mac os x\", version: \"15.6.1\", arch: \"aarch64\", family: \"mac\"\n",
+  "hadoop": "Hadoop 3.3.6\nSource code repository https://github.com/apache/hadoop.git -r 1be78238728da9266a4f88195058f08fd012bf9c\nCompiled by ubuntu on 2023-06-18T08:22Z\nCompiled on platform linux-x86_64\nCompiled with protoc 3.7.1\nFrom source with checksum 5652179ad55f76cb287d9c633bb53bbd\nThis command was run using /Users/luan/Documents/DLL-Bigdata/.tools/hadoop-3.3.6/share/hadoop/common/hadoop-common-3.3.6.jar\n",
+  "os": "Darwin Luans-MacBook-Pro.local 24.6.0 Darwin Kernel Version 24.6.0: Mon Jul 14 11:30:29 PDT 2025; root:xnu-11417.140.69~1/RELEASE_ARM64_T6000 arm64\n",
+  "python": "Python 3.9.6\n"
+}

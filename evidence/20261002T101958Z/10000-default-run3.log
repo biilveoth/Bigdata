@@ -1,0 +1,197 @@
+COMMAND: /Users/luan/Documents/DLL-Bigdata/.tools/hadoop-3.3.6/bin/hadoop jar /Users/luan/Documents/DLL-Bigdata/target/conditional-filter-1.0.0.jar /Users/luan/Documents/DLL-Bigdata/data/orders-10000.csv /Users/luan/Documents/DLL-Bigdata/output/20261002T101958Z/10000-default-run3
+17:21:20 WARN  NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+17:21:20 WARN  MetricsConfig: Cannot locate configuration: tried hadoop-metrics2-jobtracker.properties,hadoop-metrics2.properties
+17:21:20 INFO  MetricsSystemImpl: Scheduled Metric snapshot period at 10 second(s).
+17:21:20 INFO  MetricsSystemImpl: JobTracker metrics system started
+17:21:21 WARN  JobResourceUploader: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+17:21:21 INFO  FileInputFormat: Total input files to process : 1
+17:21:21 INFO  JobSubmitter: number of splits:1
+17:21:21 INFO  JobSubmitter: Submitting tokens for job: job_local797159801_0001
+17:21:21 INFO  JobSubmitter: Executing with tokens: []
+17:21:21 INFO  Job: The url to track the job: http://localhost:8080/
+17:21:21 INFO  Job: Running job: job_local797159801_0001
+17:21:21 INFO  LocalJobRunner: OutputCommitter set in config null
+17:21:21 INFO  PathOutputCommitterFactory: No output committer factory defined, defaulting to FileOutputCommitterFactory
+17:21:21 INFO  FileOutputCommitter: File Output Committer Algorithm version is 2
+17:21:21 INFO  FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+17:21:21 INFO  LocalJobRunner: OutputCommitter is org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+17:21:21 INFO  LocalJobRunner: Waiting for map tasks
+17:21:21 INFO  LocalJobRunner: Starting task: attempt_local797159801_0001_m_000000_0
+17:21:21 INFO  PathOutputCommitterFactory: No output committer factory defined, defaulting to FileOutputCommitterFactory
+17:21:21 INFO  FileOutputCommitter: File Output Committer Algorithm version is 2
+17:21:21 INFO  FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+17:21:21 INFO  ProcfsBasedProcessTree: ProcfsBasedProcessTree currently is supported only on Linux.
+17:21:21 INFO  Task:  Using ResourceCalculatorProcessTree : null
+17:21:21 INFO  MapTask: Processing split: file:/Users/luan/Documents/DLL-Bigdata/data/orders-10000.csv:0+526061
+17:21:21 INFO  MapTask: (EQUATOR) 0 kvi 26214396(104857584)
+17:21:21 INFO  MapTask: mapreduce.task.io.sort.mb: 100
+17:21:21 INFO  MapTask: soft limit at 83886080
+17:21:21 INFO  MapTask: bufstart = 0; bufvoid = 104857600
+17:21:21 INFO  MapTask: kvstart = 26214396; length = 6553600
+17:21:21 INFO  MapTask: Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+17:21:21 INFO  LocalJobRunner: 
+17:21:21 INFO  MapTask: Starting flush of map output
+17:21:21 INFO  MapTask: Spilling map output
+17:21:21 INFO  MapTask: bufstart = 0; bufend = 315500; bufvoid = 104857600
+17:21:21 INFO  MapTask: kvstart = 26214396(104857584); kvend = 26194400(104777600); length = 19997/6553600
+17:21:21 INFO  MapTask: Finished spill 0
+17:21:21 INFO  Task: Task:attempt_local797159801_0001_m_000000_0 is done. And is in the process of committing
+17:21:21 INFO  LocalJobRunner: map
+17:21:21 INFO  Task: Task 'attempt_local797159801_0001_m_000000_0' done.
+17:21:21 INFO  Task: Final Counters for attempt_local797159801_0001_m_000000_0: Counters: 22
+	File System Counters
+		FILE: Number of bytes read=52027874
+		FILE: Number of bytes written=52862764
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=10001
+		Map output records=5000
+		Map output bytes=315500
+		Map output materialized bytes=325506
+		Input split bytes=125
+		Combine input records=0
+		Spilled Records=5000
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=14
+		Total committed heap usage (bytes)=269484032
+	com.example.filter.FilterCounters
+		HEADER_LINES=1
+		INPUT_RECORDS=10000
+		INVALID_RECORDS=2000
+		MAP_MATCHED=5000
+		MAP_REJECTED=3000
+	File Input Format Counters 
+		Bytes Read=526061
+17:21:21 INFO  LocalJobRunner: Finishing task: attempt_local797159801_0001_m_000000_0
+17:21:21 INFO  LocalJobRunner: map task executor complete.
+17:21:21 INFO  LocalJobRunner: Waiting for reduce tasks
+17:21:21 INFO  LocalJobRunner: Starting task: attempt_local797159801_0001_r_000000_0
+17:21:21 INFO  PathOutputCommitterFactory: No output committer factory defined, defaulting to FileOutputCommitterFactory
+17:21:21 INFO  FileOutputCommitter: File Output Committer Algorithm version is 2
+17:21:21 INFO  FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+17:21:21 INFO  ProcfsBasedProcessTree: ProcfsBasedProcessTree currently is supported only on Linux.
+17:21:21 INFO  Task:  Using ResourceCalculatorProcessTree : null
+17:21:21 INFO  ReduceTask: Using ShuffleConsumerPlugin: org.apache.hadoop.mapreduce.task.reduce.Shuffle@517b66f
+17:21:21 WARN  MetricsSystemImpl: JobTracker metrics system already initialized!
+17:21:21 INFO  MergeManagerImpl: MergerManager: memoryLimit=751619264, maxSingleShuffleLimit=187904816, mergeThreshold=496068736, ioSortFactor=10, memToMemMergeOutputsThreshold=10
+17:21:21 INFO  EventFetcher: attempt_local797159801_0001_r_000000_0 Thread started: EventFetcher for fetching Map Completion Events
+17:21:21 INFO  LocalFetcher: localfetcher#1 about to shuffle output of map attempt_local797159801_0001_m_000000_0 decomp: 325502 len: 325506 to MEMORY
+17:21:21 INFO  InMemoryMapOutput: Read 325502 bytes from map-output for attempt_local797159801_0001_m_000000_0
+17:21:21 INFO  MergeManagerImpl: closeInMemoryFile -> map-output of size: 325502, inMemoryMapOutputs.size() -> 1, commitMemory -> 0, usedMemory ->325502
+17:21:21 INFO  EventFetcher: EventFetcher is interrupted.. Returning
+17:21:21 INFO  LocalJobRunner: 1 / 1 copied.
+17:21:21 INFO  MergeManagerImpl: finalMerge called with 1 in-memory map-outputs and 0 on-disk map-outputs
+17:21:21 INFO  Merger: Merging 1 sorted segments
+17:21:21 INFO  Merger: Down to the last merge-pass, with 1 segments left of total size: 325491 bytes
+17:21:21 INFO  MergeManagerImpl: Merged 1 segments, 325502 bytes to disk to satisfy reduce memory limit
+17:21:21 INFO  MergeManagerImpl: Merging 1 files, 325506 bytes from disk
+17:21:21 INFO  MergeManagerImpl: Merging 0 segments, 0 bytes from memory into reduce
+17:21:21 INFO  Merger: Merging 1 sorted segments
+17:21:21 INFO  Merger: Down to the last merge-pass, with 1 segments left of total size: 325491 bytes
+17:21:21 INFO  LocalJobRunner: 1 / 1 copied.
+17:21:21 INFO  deprecation: mapred.skip.on is deprecated. Instead, use mapreduce.job.skiprecords
+17:21:22 INFO  Task: Task:attempt_local797159801_0001_r_000000_0 is done. And is in the process of committing
+17:21:22 INFO  LocalJobRunner: 1 / 1 copied.
+17:21:22 INFO  Task: Task attempt_local797159801_0001_r_000000_0 is allowed to commit now
+17:21:22 INFO  FileOutputCommitter: Saved output of task 'attempt_local797159801_0001_r_000000_0' to file:/Users/luan/Documents/DLL-Bigdata/output/20261002T101958Z/10000-default-run3
+17:21:22 INFO  LocalJobRunner: reduce > reduce
+17:21:22 INFO  Task: Task 'attempt_local797159801_0001_r_000000_0' done.
+17:21:22 INFO  Task: Final Counters for attempt_local797159801_0001_r_000000_0: Counters: 28
+	File System Counters
+		FILE: Number of bytes read=52678918
+		FILE: Number of bytes written=53328870
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=1500
+		Reduce shuffle bytes=325506
+		Reduce input records=5000
+		Reduce output records=2500
+		Spilled Records=5000
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=2
+		Total committed heap usage (bytes)=269484032
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	com.example.filter.FilterCounters
+		CUSTOMERS_ACCEPTED=500
+		CUSTOMERS_REJECTED=1000
+		GROUP_REJECTED_RECORDS=2500
+		OUTPUT_RECORDS=2500
+	File Output Format Counters 
+		Bytes Written=140600
+17:21:22 INFO  LocalJobRunner: Finishing task: attempt_local797159801_0001_r_000000_0
+17:21:22 INFO  LocalJobRunner: reduce task executor complete.
+17:21:22 INFO  Job: Job job_local797159801_0001 running in uber mode : false
+17:21:22 INFO  Job:  map 100% reduce 100%
+17:21:22 INFO  Job: Job job_local797159801_0001 completed successfully
+17:21:22 INFO  Job: Counters: 39
+	File System Counters
+		FILE: Number of bytes read=104706792
+		FILE: Number of bytes written=106191634
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=10001
+		Map output records=5000
+		Map output bytes=315500
+		Map output materialized bytes=325506
+		Input split bytes=125
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=1500
+		Reduce shuffle bytes=325506
+		Reduce input records=5000
+		Reduce output records=2500
+		Spilled Records=10000
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=16
+		Total committed heap usage (bytes)=538968064
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	com.example.filter.FilterCounters
+		CUSTOMERS_ACCEPTED=500
+		CUSTOMERS_REJECTED=1000
+		GROUP_REJECTED_RECORDS=2500
+		HEADER_LINES=1
+		INPUT_RECORDS=10000
+		INVALID_RECORDS=2000
+		MAP_MATCHED=5000
+		MAP_REJECTED=3000
+		OUTPUT_RECORDS=2500
+	File Input Format Counters 
+		Bytes Read=526061
+	File Output Format Counters 
+		Bytes Written=140600
+INPUT_RECORDS=10000
+HEADER_LINES=1
+EMPTY_LINES=0
+INVALID_RECORDS=2000
+MAP_MATCHED=5000
+MAP_REJECTED=3000
+CUSTOMERS_ACCEPTED=500
+CUSTOMERS_REJECTED=1000
+OUTPUT_RECORDS=2500
+GROUP_REJECTED_RECORDS=2500
+JOB_ELAPSED_MS=1565

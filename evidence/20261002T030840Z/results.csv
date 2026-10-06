@@ -1,0 +1,11 @@
+scenario,run,input_records,map_matched,output_records,invalid_records,job_ms,process_seconds,verification,output
+sample-default,1,17,8,3,3,1518,9.750217,PASS,output/20261002T030840Z/sample-default-run1
+sample-min2,1,17,8,5,3,1517,9.777782,PASS,output/20261002T030840Z/sample-min2-run1
+edge-default,1,19,9,6,8,1599,9.999876,PASS,output/20261002T030840Z/edge-default-run1
+sample-no-match,1,17,8,0,3,1568,10.961754,PASS,output/20261002T030840Z/sample-no-match-run1
+10000-default,1,10000,5000,2500,2000,1577,10.451374,PASS,output/20261002T030840Z/10000-default-run1
+10000-default,2,10000,5000,2500,2000,2000,11.534293,PASS,output/20261002T030840Z/10000-default-run2
+10000-default,3,10000,5000,2500,2000,1880,11.360774,PASS,output/20261002T030840Z/10000-default-run3
+100000-default,1,100000,50000,25000,20000,4568,13.43861,PASS,output/20261002T030840Z/100000-default-run1
+100000-default,2,100000,50000,25000,20000,4697,13.409887,PASS,output/20261002T030840Z/100000-default-run2
+100000-default,3,100000,50000,25000,20000,4538,12.813162,PASS,output/20261002T030840Z/100000-default-run3

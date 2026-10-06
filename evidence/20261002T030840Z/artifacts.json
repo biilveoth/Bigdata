@@ -1,0 +1,21 @@
+{
+  "jar_sha256": "7856ec31876f8baabc317a1c49a863162bbbb7738addb7606ab71608162eab30",
+  "datasets": [
+    {
+      "path": "data/orders-10000.csv",
+      "records": 10000,
+      "bytes": 526061,
+      "seed": 2026,
+      "sha256": "8fc6a4ab4f90c8e1d4fe9c5f992e4af4a69475697b99dba677a42a105e7bf083",
+      "generator": "20-row blocks, version 1"
+    },
+    {
+      "path": "data/orders-100000.csv",
+      "records": 100000,
+      "bytes": 5260061,
+      "seed": 2026,
+      "sha256": "f8cbfa086b97fc7fd7573b5f13cac5f0131df1d81b98f6ce912a7f6596f3d3fb",
+      "generator": "20-row blocks, version 1"
+    }
+  ]
+}

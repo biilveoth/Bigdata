@@ -1,0 +1,1301 @@
+COMMAND: mvn --batch-mode clean package
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------< com.example:conditional-filter >-------------------
+[INFO] Building conditional-filter 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-clean-plugin/3.2.0/maven-clean-plugin-3.2.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-clean-plugin/3.2.0/maven-clean-plugin-3.2.0.pom (5.3 kB at 14 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/35/maven-plugins-35.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/35/maven-plugins-35.pom (9.9 kB at 119 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/35/maven-parent-35.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/35/maven-parent-35.pom (45 kB at 742 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/25/apache-25.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/25/apache-25.pom (21 kB at 348 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-clean-plugin/3.2.0/maven-clean-plugin-3.2.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-clean-plugin/3.2.0/maven-clean-plugin-3.2.0.jar (36 kB at 420 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/hadoop-client/3.3.6/hadoop-client-3.3.6.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/hadoop-client/3.3.6/hadoop-client-3.3.6.pom (11 kB at 47 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/hadoop-project-dist/3.3.6/hadoop-project-dist-3.3.6.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/hadoop-project-dist/3.3.6/hadoop-project-dist-3.3.6.pom (18 kB at 258 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/hadoop-project/3.3.6/hadoop-project-3.3.6.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/hadoop-project/3.3.6/hadoop-project-3.3.6.pom (94 kB at 1.3 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/hadoop-main/3.3.6/hadoop-main-3.3.6.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/hadoop-main/3.3.6/hadoop-main-3.3.6.pom (30 kB at 416 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/hadoop-common/3.3.6/hadoop-common-3.3.6.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/hadoop-common/3.3.6/hadoop-common-3.3.6.pom (43 kB at 631 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/thirdparty/hadoop-shaded-protobuf_3_7/1.1.1/hadoop-shaded-protobuf_3_7-1.1.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/thirdparty/hadoop-shaded-protobuf_3_7/1.1.1/hadoop-shaded-protobuf_3_7-1.1.1.pom (3.0 kB at 45 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/thirdparty/hadoop-thirdparty/1.1.1/hadoop-thirdparty-1.1.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/thirdparty/hadoop-thirdparty/1.1.1/hadoop-thirdparty-1.1.1.pom (16 kB at 169 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/hadoop-annotations/3.3.6/hadoop-annotations-3.3.6.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/hadoop-annotations/3.3.6/hadoop-annotations-3.3.6.pom (2.6 kB at 36 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/thirdparty/hadoop-shaded-guava/1.1.1/hadoop-shaded-guava-1.1.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/thirdparty/hadoop-shaded-guava/1.1.1/hadoop-shaded-guava-1.1.1.pom (3.0 kB at 40 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/guava/guava/27.0-jre/guava-27.0-jre.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/guava/guava/27.0-jre/guava-27.0-jre.pom (8.1 kB at 88 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/guava/guava-parent/27.0-jre/guava-parent-27.0-jre.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/guava/guava-parent/27.0-jre/guava-parent-27.0-jre.pom (10 kB at 168 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/guava/failureaccess/1.0/failureaccess-1.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/guava/failureaccess/1.0/failureaccess-1.0.pom (1.7 kB at 24 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/guava/guava-parent/26.0-android/guava-parent-26.0-android.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/guava/guava-parent/26.0-android/guava-parent-26.0-android.pom (10 kB at 97 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.pom (2.3 kB at 32 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/checkerframework/checker-qual/2.5.2/checker-qual-2.5.2.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/checkerframework/checker-qual/2.5.2/checker-qual-2.5.2.pom (2.5 kB at 30 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.pom (2.8 kB at 37 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/animal-sniffer-annotations/1.17/animal-sniffer-annotations-1.17.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/animal-sniffer-annotations/1.17/animal-sniffer-annotations-1.17.pom (2.6 kB at 44 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/animal-sniffer-parent/1.17/animal-sniffer-parent-1.17.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/animal-sniffer-parent/1.17/animal-sniffer-parent-1.17.pom (8.6 kB at 148 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/mojo-parent/40/mojo-parent-40.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/mojo-parent/40/mojo-parent-40.pom (34 kB at 551 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.15/commons-codec-1.15.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.15/commons-codec-1.15.pom (15 kB at 249 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.8.0/commons-io-2.8.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.8.0/commons-io-2.8.0.pom (16 kB at 258 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-net/commons-net/3.9.0/commons-net-3.9.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-net/commons-net/3.9.0/commons-net-3.9.0.pom (24 kB at 362 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/jakarta/activation/jakarta.activation-api/1.2.1/jakarta.activation-api-1.2.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/jakarta/activation/jakarta.activation-api/1.2.1/jakarta.activation-api-1.2.1.pom (4.6 kB at 68 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/sun/activation/all/1.2.1/all-1.2.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/sun/activation/all/1.2.1/all-1.2.1.pom (18 kB at 266 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/ee4j/project/1.0.2/project-1.0.2.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/ee4j/project/1.0.2/project-1.0.2.pom (12 kB at 166 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-servlet/9.4.51.v20230217/jetty-servlet-9.4.51.v20230217.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-servlet/9.4.51.v20230217/jetty-servlet-9.4.51.v20230217.pom (2.3 kB at 33 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-project/9.4.51.v20230217/jetty-project-9.4.51.v20230217.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-project/9.4.51.v20230217/jetty-project-9.4.51.v20230217.pom (72 kB at 906 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/testcontainers/testcontainers-bom/1.16.1/testcontainers-bom-1.16.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/testcontainers/testcontainers-bom/1.16.1/testcontainers-bom-1.16.1.pom (7.2 kB at 134 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/infinispan/infinispan-bom/11.0.17.Final/infinispan-bom-11.0.17.Final.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/infinispan/infinispan-bom/11.0.17.Final/infinispan-bom-11.0.17.Final.pom (18 kB at 266 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/infinispan/infinispan-build-configuration-parent/11.0.17.Final/infinispan-build-configuration-parent-11.0.17.Final.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/infinispan/infinispan-build-configuration-parent/11.0.17.Final/infinispan-build-configuration-parent-11.0.17.Final.pom (16 kB at 263 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/jboss-parent/36/jboss-parent-36.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/jboss-parent/36/jboss-parent-36.pom (66 kB at 1.1 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-security/9.4.51.v20230217/jetty-security-9.4.51.v20230217.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-security/9.4.51.v20230217/jetty-security-9.4.51.v20230217.pom (2.1 kB at 32 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-util-ajax/9.4.51.v20230217/jetty-util-ajax-9.4.51.v20230217.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-util-ajax/9.4.51.v20230217/jetty-util-ajax-9.4.51.v20230217.pom (1.3 kB at 21 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-webapp/9.4.51.v20230217/jetty-webapp-9.4.51.v20230217.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-webapp/9.4.51.v20230217/jetty-webapp-9.4.51.v20230217.pom (3.2 kB at 47 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-xml/9.4.51.v20230217/jetty-xml-9.4.51.v20230217.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-xml/9.4.51.v20230217/jetty-xml-9.4.51.v20230217.pom (1.7 kB at 28 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/sun/jersey/jersey-servlet/1.19.4/jersey-servlet-1.19.4.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/sun/jersey/jersey-servlet/1.19.4/jersey-servlet-1.19.4.pom (9.6 kB at 160 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/sun/jersey/jersey-project/1.19.4/jersey-project-1.19.4.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/sun/jersey/jersey-project/1.19.4/jersey-project-1.19.4.pom (28 kB at 483 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/net/java/jvnet-parent/4/jvnet-parent-4.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/net/java/jvnet-parent/4/jvnet-parent-4.pom (7.8 kB at 134 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/ch/qos/reload4j/reload4j/1.2.22/reload4j-1.2.22.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/ch/qos/reload4j/reload4j/1.2.22/reload4j-1.2.22.pom (16 kB at 261 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-beanutils/commons-beanutils/1.9.4/commons-beanutils-1.9.4.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-beanutils/commons-beanutils/1.9.4/commons-beanutils-1.9.4.pom (18 kB at 290 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-configuration2/2.8.0/commons-configuration2-2.8.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-configuration2/2.8.0/commons-configuration2-2.8.0.pom (31 kB at 507 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/53/commons-parent-53.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/53/commons-parent-53.pom (82 kB at 1.1 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/24/apache-24.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/24/apache-24.pom (20 kB at 318 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-text/1.9/commons-text-1.9.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-text/1.9/commons-text-1.9.pom (17 kB at 276 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/51/commons-parent-51.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/51/commons-parent-51.pom (78 kB at 1.1 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-reload4j/1.7.36/slf4j-reload4j-1.7.36.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-reload4j/1.7.36/slf4j-reload4j-1.7.36.pom (1.2 kB at 20 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/ch/qos/reload4j/reload4j/1.2.19/reload4j-1.2.19.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/ch/qos/reload4j/reload4j/1.2.19/reload4j-1.2.19.pom (16 kB at 249 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/avro/avro/1.7.7/avro-1.7.7.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/avro/avro/1.7.7/avro-1.7.7.pom (5.6 kB at 101 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/avro/avro-parent/1.7.7/avro-parent-1.7.7.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/avro/avro-parent/1.7.7/avro-parent-1.7.7.pom (19 kB at 317 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/avro/avro-toplevel/1.7.7/avro-toplevel-1.7.7.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/avro/avro-toplevel/1.7.7/avro-toplevel-1.7.7.pom (9.6 kB at 155 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/xerial/snappy/snappy-java/1.0.5/snappy-java-1.0.5.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/xerial/snappy/snappy-java/1.0.5/snappy-java-1.0.5.pom (13 kB at 187 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/re2j/re2j/1.1/re2j-1.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/re2j/re2j/1.1/re2j-1.1.pom (3.6 kB at 62 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/code/gson/gson/2.9.0/gson-2.9.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/code/gson/gson/2.9.0/gson-2.9.0.pom (8.1 kB at 144 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/code/gson/gson-parent/2.9.0/gson-parent-2.9.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/code/gson/gson-parent/2.9.0/gson-parent-2.9.0.pom (4.5 kB at 69 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/hadoop-auth/3.3.6/hadoop-auth-3.3.6.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/hadoop-auth/3.3.6/hadoop-auth-3.3.6.pom (8.4 kB at 113 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/nimbusds/nimbus-jose-jwt/9.8.1/nimbus-jose-jwt-9.8.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/nimbusds/nimbus-jose-jwt/9.8.1/nimbus-jose-jwt-9.8.1.pom (11 kB at 154 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/github/stephenc/jcip/jcip-annotations/1.0-1/jcip-annotations-1.0-1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/github/stephenc/jcip/jcip-annotations/1.0-1/jcip-annotations-1.0-1.pom (5.4 kB at 65 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/dropwizard/metrics/metrics-core/3.2.4/metrics-core-3.2.4.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/dropwizard/metrics/metrics-core/3.2.4/metrics-core-3.2.4.pom (846 B at 12 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/dropwizard/metrics/metrics-parent/3.2.4/metrics-parent-3.2.4.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/dropwizard/metrics/metrics-parent/3.2.4/metrics-parent-3.2.4.pom (12 kB at 163 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.22/slf4j-api-1.7.22.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.22/slf4j-api-1.7.22.pom (2.8 kB at 44 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/1.7.22/slf4j-parent-1.7.22.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/1.7.22/slf4j-parent-1.7.22.pom (14 kB at 208 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/curator/curator-framework/5.2.0/curator-framework-5.2.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/curator/curator-framework/5.2.0/curator-framework-5.2.0.pom (3.8 kB at 55 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/curator/apache-curator/5.2.0/apache-curator-5.2.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/curator/apache-curator/5.2.0/apache-curator-5.2.0.pom (43 kB at 666 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/curator/curator-client/5.2.0/curator-client-5.2.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/curator/curator-client/5.2.0/curator-client-5.2.0.pom (4.6 kB at 80 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerb-simplekdc/1.0.1/kerb-simplekdc-1.0.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerb-simplekdc/1.0.1/kerb-simplekdc-1.0.1.pom (1.5 kB at 23 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerby-kerb/1.0.1/kerby-kerb-1.0.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerby-kerb/1.0.1/kerby-kerb-1.0.1.pom (1.7 kB at 25 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerby-all/1.0.1/kerby-all-1.0.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerby-all/1.0.1/kerby-all-1.0.1.pom (15 kB at 212 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerb-client/1.0.1/kerb-client-1.0.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerb-client/1.0.1/kerb-client-1.0.1.pom (2.2 kB at 35 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerby-config/1.0.1/kerby-config-1.0.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerby-config/1.0.1/kerby-config-1.0.1.pom (1.5 kB at 22 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerby-common/1.0.1/kerby-common-1.0.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerby-common/1.0.1/kerby-common-1.0.1.pom (1.3 kB at 20 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.pom (3.8 kB at 63 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/1.7.25/slf4j-parent-1.7.25.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/1.7.25/slf4j-parent-1.7.25.pom (14 kB at 211 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerb-core/1.0.1/kerb-core-1.0.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerb-core/1.0.1/kerb-core-1.0.1.pom (1.3 kB at 20 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerby-pkix/1.0.1/kerby-pkix-1.0.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerby-pkix/1.0.1/kerby-pkix-1.0.1.pom (2.0 kB at 23 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerby-asn1/1.0.1/kerby-asn1-1.0.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerby-asn1/1.0.1/kerby-asn1-1.0.1.pom (1.1 kB at 21 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerby-util/1.0.1/kerby-util-1.0.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerby-util/1.0.1/kerby-util-1.0.1.pom (1.2 kB at 16 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerb-common/1.0.1/kerb-common-1.0.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerb-common/1.0.1/kerb-common-1.0.1.pom (1.7 kB at 21 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerb-crypto/1.0.1/kerb-crypto-1.0.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerb-crypto/1.0.1/kerb-crypto-1.0.1.pom (1.5 kB at 17 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerb-util/1.0.1/kerb-util-1.0.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerb-util/1.0.1/kerb-util-1.0.1.pom (1.8 kB at 31 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kerby/token-provider/1.0.1/token-provider-1.0.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kerby/token-provider/1.0.1/token-provider-1.0.1.pom (1.5 kB at 26 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerby-provider/1.0.1/kerby-provider-1.0.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerby-provider/1.0.1/kerby-provider-1.0.1.pom (1.2 kB at 17 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/nimbusds/nimbus-jose-jwt/3.10/nimbus-jose-jwt-3.10.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/nimbusds/nimbus-jose-jwt/3.10/nimbus-jose-jwt-3.10.pom (14 kB at 211 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/net/jcip/jcip-annotations/1.0/jcip-annotations-1.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/net/jcip/jcip-annotations/1.0/jcip-annotations-1.0.pom (491 B at 8.5 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/net/minidev/json-smart/1.3.1/json-smart-1.3.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/net/minidev/json-smart/1.3.1/json-smart-1.3.1.pom (2.0 kB at 24 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/net/minidev/parent/1.3.1/parent-1.3.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/net/minidev/parent/1.3.1/parent-1.3.1.pom (8.5 kB at 125 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/bouncycastle/bcprov-jdk15on/1.52/bcprov-jdk15on-1.52.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/bouncycastle/bcprov-jdk15on/1.52/bcprov-jdk15on-1.52.pom (1.2 kB at 15 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerb-admin/1.0.1/kerb-admin-1.0.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerb-admin/1.0.1/kerb-admin-1.0.1.pom (1.7 kB at 26 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerb-server/1.0.1/kerb-server-1.0.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerb-server/1.0.1/kerb-server-1.0.1.pom (1.7 kB at 24 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerb-identity/1.0.1/kerb-identity-1.0.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerb-identity/1.0.1/kerb-identity-1.0.1.pom (1.5 kB at 24 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerby-xdr/1.0.1/kerby-xdr-1.0.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerby-xdr/1.0.1/kerby-xdr-1.0.1.pom (1.1 kB at 16 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/curator/curator-recipes/5.2.0/curator-recipes-5.2.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/curator/curator-recipes/5.2.0/curator-recipes-5.2.0.pom (3.6 kB at 55 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.12.7.1/jackson-databind-2.12.7.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.12.7.1/jackson-databind-2.12.7.1.pom (15 kB at 186 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-base/2.12.7/jackson-base-2.12.7.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-base/2.12.7/jackson-base-2.12.7.pom (9.3 kB at 160 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-bom/2.12.7/jackson-bom-2.12.7.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-bom/2.12.7/jackson-bom-2.12.7.pom (17 kB at 292 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-parent/2.12/jackson-parent-2.12.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-parent/2.12/jackson-parent-2.12.pom (7.5 kB at 99 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/oss-parent/41/oss-parent-41.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/oss-parent/41/oss-parent-41.pom (23 kB at 246 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.12.7/jackson-annotations-2.12.7.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.12.7/jackson-annotations-2.12.7.pom (6.0 kB at 81 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.12.7/jackson-core-2.12.7.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.12.7/jackson-core-2.12.7.pom (5.5 kB at 75 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/woodstox/stax2-api/4.2.1/stax2-api-4.2.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/woodstox/stax2-api/4.2.1/stax2-api-4.2.1.pom (6.3 kB at 78 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/oss-parent/38/oss-parent-38.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/oss-parent/38/oss-parent-38.pom (23 kB at 391 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/woodstox/woodstox-core/5.4.0/woodstox-core-5.4.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/woodstox/woodstox-core/5.4.0/woodstox-core-5.4.0.pom (9.7 kB at 148 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/oss-parent/37/oss-parent-37.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/oss-parent/37/oss-parent-37.pom (23 kB at 369 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/woodstox/stax2-api/4.2/stax2-api-4.2.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/woodstox/stax2-api/4.2/stax2-api-4.2.pom (6.3 kB at 100 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/oss-parent/35/oss-parent-35.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/oss-parent/35/oss-parent-35.pom (23 kB at 321 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/dnsjava/dnsjava/2.1.7/dnsjava-2.1.7.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/dnsjava/dnsjava/2.1.7/dnsjava-2.1.7.pom (7.2 kB at 120 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/xerial/snappy/snappy-java/1.1.8.2/snappy-java-1.1.8.2.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/xerial/snappy/snappy-java/1.1.8.2/snappy-java-1.1.8.2.pom (3.5 kB at 61 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/hadoop-hdfs-client/3.3.6/hadoop-hdfs-client-3.3.6.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/hadoop-hdfs-client/3.3.6/hadoop-hdfs-client-3.3.6.pom (6.3 kB at 55 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/hadoop-yarn-api/3.3.6/hadoop-yarn-api-3.3.6.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/hadoop-yarn-api/3.3.6/hadoop-yarn-api-3.3.6.pom (6.1 kB at 105 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/hadoop-yarn/3.3.6/hadoop-yarn-3.3.6.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/hadoop-yarn/3.3.6/hadoop-yarn-3.3.6.pom (10 kB at 182 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/javax/xml/bind/jaxb-api/2.2.11/jaxb-api-2.2.11.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/javax/xml/bind/jaxb-api/2.2.11/jaxb-api-2.2.11.pom (15 kB at 228 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/hadoop-yarn-client/3.3.6/hadoop-yarn-client-3.3.6.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/hadoop-yarn-client/3.3.6/hadoop-yarn-client-3.3.6.pom (7.6 kB at 110 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/websocket/websocket-client/9.4.51.v20230217/websocket-client-9.4.51.v20230217.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/websocket/websocket-client/9.4.51.v20230217/websocket-client-9.4.51.v20230217.pom (4.6 kB at 76 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/websocket/websocket-parent/9.4.51.v20230217/websocket-parent-9.4.51.v20230217.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/websocket/websocket-parent/9.4.51.v20230217/websocket-parent-9.4.51.v20230217.pom (1.4 kB at 19 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-client/9.4.51.v20230217/jetty-client-9.4.51.v20230217.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-client/9.4.51.v20230217/jetty-client-9.4.51.v20230217.pom (5.1 kB at 70 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-http/9.4.51.v20230217/jetty-http-9.4.51.v20230217.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-http/9.4.51.v20230217/jetty-http-9.4.51.v20230217.pom (4.0 kB at 75 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-util/9.4.51.v20230217/jetty-util-9.4.51.v20230217.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-util/9.4.51.v20230217/jetty-util-9.4.51.v20230217.pom (4.0 kB at 59 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-io/9.4.51.v20230217/jetty-io-9.4.51.v20230217.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-io/9.4.51.v20230217/jetty-io-9.4.51.v20230217.pom (1.2 kB at 11 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/websocket/websocket-common/9.4.51.v20230217/websocket-common-9.4.51.v20230217.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/websocket/websocket-common/9.4.51.v20230217/websocket-common-9.4.51.v20230217.pom (3.6 kB at 60 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/websocket/websocket-api/9.4.51.v20230217/websocket-api-9.4.51.v20230217.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/websocket/websocket-api/9.4.51.v20230217/websocket-api-9.4.51.v20230217.pom (2.5 kB at 39 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jline/jline/3.9.0/jline-3.9.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jline/jline/3.9.0/jline-3.9.0.pom (15 kB at 239 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jline/jline-parent/3.9.0/jline-parent-3.9.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jline/jline-parent/3.9.0/jline-parent-3.9.0.pom (18 kB at 266 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/hadoop-mapreduce-client-core/3.3.6/hadoop-mapreduce-client-core-3.3.6.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/hadoop-mapreduce-client-core/3.3.6/hadoop-mapreduce-client-core-3.3.6.pom (6.1 kB at 96 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/hadoop-mapreduce-client/3.3.6/hadoop-mapreduce-client-3.3.6.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/hadoop-mapreduce-client/3.3.6/hadoop-mapreduce-client-3.3.6.pom (12 kB at 193 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/hadoop-yarn-common/3.3.6/hadoop-yarn-common-3.3.6.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/hadoop-yarn-common/3.3.6/hadoop-yarn-common-3.3.6.pom (15 kB at 274 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/4.9.3/okhttp-4.9.3.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/4.9.3/okhttp-4.9.3.pom (1.8 kB at 27 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/squareup/okio/okio/2.8.0/okio-2.8.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/squareup/okio/okio/2.8.0/okio-2.8.0.pom (1.8 kB at 26 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/1.4.10/kotlin-stdlib-1.4.10.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/1.4.10/kotlin-stdlib-1.4.10.pom (2.0 kB at 25 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib-common/1.4.10/kotlin-stdlib-common-1.4.10.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib-common/1.4.10/kotlin-stdlib-common-1.4.10.pom (1.6 kB at 28 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/zookeeper/zookeeper/3.6.3/zookeeper-3.6.3.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/zookeeper/zookeeper/3.6.3/zookeeper-3.6.3.pom (9.9 kB at 130 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/zookeeper/parent/3.6.3/parent-3.6.3.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/zookeeper/parent/3.6.3/parent-3.6.3.pom (35 kB at 440 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/zookeeper/zookeeper-jute/3.6.3/zookeeper-jute-3.6.3.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/zookeeper/zookeeper-jute/3.6.3/zookeeper-jute-3.6.3.pom (5.6 kB at 58 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/yetus/audience-annotations/0.5.0/audience-annotations-0.5.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/yetus/audience-annotations/0.5.0/audience-annotations-0.5.0.pom (1.9 kB at 26 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/yetus/yetus-project/0.5.0/yetus-project-0.5.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/yetus/yetus-project/0.5.0/yetus-project-0.5.0.pom (6.8 kB at 111 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/17/apache-17.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/17/apache-17.pom (16 kB at 226 kB/s)
+[WARNING] 2 problems were encountered while building the effective model for org.apache.yetus:audience-annotations:jar:0.5.0 during dependency collection step for project (use -X to see details)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.pom (14 kB at 233 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/sun/jersey/jersey-core/1.19.4/jersey-core-1.19.4.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/sun/jersey/jersey-core/1.19.4/jersey-core-1.19.4.pom (9.7 kB at 108 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/javax/ws/rs/jsr311-api/1.1.1/jsr311-api-1.1.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/javax/ws/rs/jsr311-api/1.1.1/jsr311-api-1.1.1.pom (5.5 kB at 48 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/sun/jersey/jersey-client/1.19.4/jersey-client-1.19.4.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/sun/jersey/jersey-client/1.19.4/jersey-client-1.19.4.pom (6.7 kB at 98 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/module/jackson-module-jaxb-annotations/2.12.7/jackson-module-jaxb-annotations-2.12.7.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/module/jackson-module-jaxb-annotations/2.12.7/jackson-module-jaxb-annotations-2.12.7.pom (5.3 kB at 91 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/module/jackson-modules-base/2.12.7/jackson-modules-base-2.12.7.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/module/jackson-modules-base/2.12.7/jackson-modules-base-2.12.7.pom (3.5 kB at 55 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.12.7/jackson-databind-2.12.7.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.12.7/jackson-databind-2.12.7.pom (15 kB at 195 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/jakarta/xml/bind/jakarta.xml.bind-api/2.3.2/jakarta.xml.bind-api-2.3.2.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/jakarta/xml/bind/jakarta.xml.bind-api/2.3.2/jakarta.xml.bind-api-2.3.2.pom (16 kB at 222 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/jakarta/xml/bind/jakarta.xml.bind-api-parent/2.3.2/jakarta.xml.bind-api-parent-2.3.2.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/jakarta/xml/bind/jakarta.xml.bind-api-parent/2.3.2/jakarta.xml.bind-api-parent-2.3.2.pom (7.7 kB at 118 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/ee4j/project/1.0.5/project-1.0.5.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/ee4j/project/1.0.5/project-1.0.5.pom (13 kB at 143 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jaxrs/jackson-jaxrs-json-provider/2.12.7/jackson-jaxrs-json-provider-2.12.7.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jaxrs/jackson-jaxrs-json-provider/2.12.7/jackson-jaxrs-json-provider-2.12.7.pom (7.1 kB at 106 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jaxrs/jackson-jaxrs-providers/2.12.7/jackson-jaxrs-providers-2.12.7.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jaxrs/jackson-jaxrs-providers/2.12.7/jackson-jaxrs-providers-2.12.7.pom (6.3 kB at 48 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jaxrs/jackson-jaxrs-base/2.12.7/jackson-jaxrs-base-2.12.7.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jaxrs/jackson-jaxrs-base/2.12.7/jackson-jaxrs-base-2.12.7.pom (4.6 kB at 78 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/hadoop-mapreduce-client-jobclient/3.3.6/hadoop-mapreduce-client-jobclient-3.3.6.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/hadoop-mapreduce-client-jobclient/3.3.6/hadoop-mapreduce-client-jobclient-3.3.6.pom (6.4 kB at 75 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/hadoop-mapreduce-client-common/3.3.6/hadoop-mapreduce-client-common-3.3.6.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/hadoop-mapreduce-client-common/3.3.6/hadoop-mapreduce-client-common-3.3.6.pom (3.9 kB at 55 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/inject/guice/4.0/guice-4.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/inject/guice/4.0/guice-4.0.pom (11 kB at 190 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/inject/guice-parent/4.0/guice-parent-4.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/inject/guice-parent/4.0/guice-parent-4.0.pom (15 kB at 246 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/sun/jersey/jersey-server/1.19.4/jersey-server-1.19.4.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/sun/jersey/jersey-server/1.19.4/jersey-server-1.19.4.pom (11 kB at 184 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/github/pjfanning/jersey-json/1.20/jersey-json-1.20.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/github/pjfanning/jersey-json/1.20/jersey-json-1.20.pom (13 kB at 199 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/sun/jersey/contribs/jersey-guice/1.19.4/jersey-guice-1.19.4.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/sun/jersey/contribs/jersey-guice/1.19.4/jersey-guice-1.19.4.pom (7.5 kB at 126 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/sun/jersey/contribs/jersey-contribs/1.19.4/jersey-contribs-1.19.4.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/sun/jersey/contribs/jersey-contribs/1.19.4/jersey-contribs-1.19.4.pom (3.6 kB at 62 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/hadoop-client/3.3.6/hadoop-client-3.3.6.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/hadoop-client/3.3.6/hadoop-client-3.3.6.jar (8.6 kB at 136 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/hadoop-common/3.3.6/hadoop-common-3.3.6.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/guava/guava/27.0-jre/guava-27.0-jre.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/thirdparty/hadoop-shaded-protobuf_3_7/1.1.1/hadoop-shaded-protobuf_3_7-1.1.1.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/thirdparty/hadoop-shaded-guava/1.1.1/hadoop-shaded-guava-1.1.1.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/guava/failureaccess/1.0/failureaccess-1.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/guava/failureaccess/1.0/failureaccess-1.0.jar (3.7 kB at 20 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar (2.2 kB at 8.3 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/checkerframework/checker-qual/2.5.2/checker-qual-2.5.2.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/checkerframework/checker-qual/2.5.2/checker-qual-2.5.2.jar (193 kB at 390 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar (8.8 kB at 15 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/animal-sniffer-annotations/1.17/animal-sniffer-annotations-1.17.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/thirdparty/hadoop-shaded-protobuf_3_7/1.1.1/hadoop-shaded-protobuf_3_7-1.1.1.jar (1.5 MB at 2.3 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/animal-sniffer-annotations/1.17/animal-sniffer-annotations-1.17.jar (3.4 kB at 4.9 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/hadoop-common/3.3.6/hadoop-common-3.3.6.jar (4.6 MB at 6.5 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.15/commons-codec-1.15.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.8.0/commons-io-2.8.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar (329 kB at 430 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-net/commons-net/3.9.0/commons-net-3.9.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/guava/guava/27.0-jre/guava-27.0-jre.jar (2.7 MB at 3.4 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/jakarta/activation/jakarta.activation-api/1.2.1/jakarta.activation-api-1.2.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.8.0/commons-io-2.8.0.jar (285 kB at 346 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-servlet/9.4.51.v20230217/jetty-servlet-9.4.51.v20230217.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-net/commons-net/3.9.0/commons-net-3.9.0.jar (316 kB at 371 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-security/9.4.51.v20230217/jetty-security-9.4.51.v20230217.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/jakarta/activation/jakarta.activation-api/1.2.1/jakarta.activation-api-1.2.1.jar (44 kB at 49 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-util-ajax/9.4.51.v20230217/jetty-util-ajax-9.4.51.v20230217.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/thirdparty/hadoop-shaded-guava/1.1.1/hadoop-shaded-guava-1.1.1.jar (3.4 MB at 3.7 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-webapp/9.4.51.v20230217/jetty-webapp-9.4.51.v20230217.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-servlet/9.4.51.v20230217/jetty-servlet-9.4.51.v20230217.jar (146 kB at 159 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-xml/9.4.51.v20230217/jetty-xml-9.4.51.v20230217.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.15/commons-codec-1.15.jar (354 kB at 385 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/sun/jersey/jersey-servlet/1.19.4/jersey-servlet-1.19.4.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-security/9.4.51.v20230217/jetty-security-9.4.51.v20230217.jar (119 kB at 126 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/ch/qos/reload4j/reload4j/1.2.22/reload4j-1.2.22.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-xml/9.4.51.v20230217/jetty-xml-9.4.51.v20230217.jar (68 kB at 68 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-beanutils/commons-beanutils/1.9.4/commons-beanutils-1.9.4.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-util-ajax/9.4.51.v20230217/jetty-util-ajax-9.4.51.v20230217.jar (67 kB at 66 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-configuration2/2.8.0/commons-configuration2-2.8.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/sun/jersey/jersey-servlet/1.19.4/jersey-servlet-1.19.4.jar (129 kB at 128 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-reload4j/1.7.36/slf4j-reload4j-1.7.36.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-webapp/9.4.51.v20230217/jetty-webapp-9.4.51.v20230217.jar (140 kB at 137 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/avro/avro/1.7.7/avro-1.7.7.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/ch/qos/reload4j/reload4j/1.2.22/reload4j-1.2.22.jar (332 kB at 321 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/re2j/re2j/1.1/re2j-1.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-reload4j/1.7.36/slf4j-reload4j-1.7.36.jar (9.8 kB at 9.2 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/code/gson/gson/2.9.0/gson-2.9.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-beanutils/commons-beanutils/1.9.4/commons-beanutils-1.9.4.jar (247 kB at 230 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/hadoop-auth/3.3.6/hadoop-auth-3.3.6.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-configuration2/2.8.0/commons-configuration2-2.8.0.jar (633 kB at 571 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/nimbusds/nimbus-jose-jwt/9.8.1/nimbus-jose-jwt-9.8.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/re2j/re2j/1.1/re2j-1.1.jar (128 kB at 115 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/github/stephenc/jcip/jcip-annotations/1.0-1/jcip-annotations-1.0-1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/avro/avro/1.7.7/avro-1.7.7.jar (436 kB at 381 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/curator/curator-framework/5.2.0/curator-framework-5.2.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/hadoop-auth/3.3.6/hadoop-auth-3.3.6.jar (106 kB at 92 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerb-simplekdc/1.0.1/kerb-simplekdc-1.0.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/code/gson/gson/2.9.0/gson-2.9.0.jar (249 kB at 212 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerb-client/1.0.1/kerb-client-1.0.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/github/stephenc/jcip/jcip-annotations/1.0-1/jcip-annotations-1.0-1.jar (4.7 kB at 4.0 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerby-config/1.0.1/kerby-config-1.0.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/nimbusds/nimbus-jose-jwt/9.8.1/nimbus-jose-jwt-9.8.1.jar (444 kB at 365 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerb-common/1.0.1/kerb-common-1.0.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/curator/curator-framework/5.2.0/curator-framework-5.2.0.jar (336 kB at 270 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerb-crypto/1.0.1/kerb-crypto-1.0.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerb-simplekdc/1.0.1/kerb-simplekdc-1.0.1.jar (20 kB at 16 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerb-util/1.0.1/kerb-util-1.0.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerby-config/1.0.1/kerby-config-1.0.1.jar (31 kB at 25 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kerby/token-provider/1.0.1/token-provider-1.0.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerb-client/1.0.1/kerb-client-1.0.1.jar (113 kB at 89 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerb-admin/1.0.1/kerb-admin-1.0.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerb-common/1.0.1/kerb-common-1.0.1.jar (65 kB at 49 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerb-server/1.0.1/kerb-server-1.0.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerb-crypto/1.0.1/kerb-crypto-1.0.1.jar (116 kB at 86 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerb-identity/1.0.1/kerb-identity-1.0.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerb-util/1.0.1/kerb-util-1.0.1.jar (37 kB at 27 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerby-xdr/1.0.1/kerby-xdr-1.0.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kerby/token-provider/1.0.1/token-provider-1.0.1.jar (19 kB at 14 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/curator/curator-client/5.2.0/curator-client-5.2.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerb-admin/1.0.1/kerb-admin-1.0.1.jar (81 kB at 58 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/curator/curator-recipes/5.2.0/curator-recipes-5.2.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerb-server/1.0.1/kerb-server-1.0.1.jar (83 kB at 58 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/dropwizard/metrics/metrics-core/3.2.4/metrics-core-3.2.4.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerby-xdr/1.0.1/kerby-xdr-1.0.1.jar (29 kB at 20 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerb-core/1.0.1/kerb-core-1.0.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerb-identity/1.0.1/kerb-identity-1.0.1.jar (20 kB at 14 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerby-pkix/1.0.1/kerby-pkix-1.0.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/dropwizard/metrics/metrics-core/3.2.4/metrics-core-3.2.4.jar (136 kB at 88 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerby-asn1/1.0.1/kerby-asn1-1.0.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/curator/curator-recipes/5.2.0/curator-recipes-5.2.0.jar (316 kB at 201 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerby-util/1.0.1/kerby-util-1.0.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerb-core/1.0.1/kerb-core-1.0.1.jar (227 kB at 144 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.12.7.1/jackson-databind-2.12.7.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerby-pkix/1.0.1/kerby-pkix-1.0.1.jar (205 kB at 125 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.12.7/jackson-core-2.12.7.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/curator/curator-client/5.2.0/curator-client-5.2.0.jar (3.0 MB at 1.8 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/woodstox/stax2-api/4.2.1/stax2-api-4.2.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerby-util/1.0.1/kerby-util-1.0.1.jar (41 kB at 24 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/woodstox/woodstox-core/5.4.0/woodstox-core-5.4.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kerby/kerby-asn1/1.0.1/kerby-asn1-1.0.1.jar (102 kB at 60 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/dnsjava/dnsjava/2.1.7/dnsjava-2.1.7.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/woodstox/stax2-api/4.2.1/stax2-api-4.2.1.jar (196 kB at 112 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/xerial/snappy/snappy-java/1.1.8.2/snappy-java-1.1.8.2.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.12.7/jackson-core-2.12.7.jar (366 kB at 207 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/hadoop-hdfs-client/3.3.6/hadoop-hdfs-client-3.3.6.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/dnsjava/dnsjava/2.1.7/dnsjava-2.1.7.jar (308 kB at 170 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.12.7/jackson-annotations-2.12.7.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.12.7.1/jackson-databind-2.12.7.1.jar (1.5 MB at 815 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/hadoop-yarn-api/3.3.6/hadoop-yarn-api-3.3.6.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/woodstox/woodstox-core/5.4.0/woodstox-core-5.4.0.jar (523 kB at 270 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/javax/xml/bind/jaxb-api/2.2.11/jaxb-api-2.2.11.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/xerial/snappy/snappy-java/1.1.8.2/snappy-java-1.1.8.2.jar (2.0 MB at 1.0 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/hadoop-yarn-client/3.3.6/hadoop-yarn-client-3.3.6.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.12.7/jackson-annotations-2.12.7.jar (76 kB at 38 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/websocket/websocket-client/9.4.51.v20230217/websocket-client-9.4.51.v20230217.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/javax/xml/bind/jaxb-api/2.2.11/jaxb-api-2.2.11.jar (102 kB at 49 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-client/9.4.51.v20230217/jetty-client-9.4.51.v20230217.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/hadoop-yarn-client/3.3.6/hadoop-yarn-client-3.3.6.jar (287 kB at 137 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-http/9.4.51.v20230217/jetty-http-9.4.51.v20230217.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/websocket/websocket-client/9.4.51.v20230217/websocket-client-9.4.51.v20230217.jar (46 kB at 21 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-util/9.4.51.v20230217/jetty-util-9.4.51.v20230217.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-http/9.4.51.v20230217/jetty-http-9.4.51.v20230217.jar (235 kB at 107 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-io/9.4.51.v20230217/jetty-io-9.4.51.v20230217.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-client/9.4.51.v20230217/jetty-client-9.4.51.v20230217.jar (328 kB at 147 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/websocket/websocket-common/9.4.51.v20230217/websocket-common-9.4.51.v20230217.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-util/9.4.51.v20230217/jetty-util-9.4.51.v20230217.jar (584 kB at 252 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/websocket/websocket-api/9.4.51.v20230217/websocket-api-9.4.51.v20230217.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-io/9.4.51.v20230217/jetty-io-9.4.51.v20230217.jar (183 kB at 79 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jline/jline/3.9.0/jline-3.9.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/hadoop-yarn-api/3.3.6/hadoop-yarn-api-3.3.6.jar (3.7 MB at 1.6 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/hadoop-mapreduce-client-core/3.3.6/hadoop-mapreduce-client-core-3.3.6.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/websocket/websocket-common/9.4.51.v20230217/websocket-common-9.4.51.v20230217.jar (215 kB at 91 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/hadoop-yarn-common/3.3.6/hadoop-yarn-common-3.3.6.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/websocket/websocket-api/9.4.51.v20230217/websocket-api-9.4.51.v20230217.jar (52 kB at 21 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jline/jline/3.9.0/jline-3.9.0.jar (707 kB at 284 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/sun/jersey/jersey-core/1.19.4/jersey-core-1.19.4.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/hadoop-hdfs-client/3.3.6/hadoop-hdfs-client-3.3.6.jar (5.5 MB at 2.2 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/javax/ws/rs/jsr311-api/1.1.1/jsr311-api-1.1.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar (96 kB at 37 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/sun/jersey/jersey-client/1.19.4/jersey-client-1.19.4.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/sun/jersey/jersey-core/1.19.4/jersey-core-1.19.4.jar (437 kB at 165 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/module/jackson-module-jaxb-annotations/2.12.7/jackson-module-jaxb-annotations-2.12.7.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/hadoop-mapreduce-client-core/3.3.6/hadoop-mapreduce-client-core-3.3.6.jar (1.8 MB at 666 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/jakarta/xml/bind/jakarta.xml.bind-api/2.3.2/jakarta.xml.bind-api-2.3.2.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/javax/ws/rs/jsr311-api/1.1.1/jsr311-api-1.1.1.jar (46 kB at 17 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jaxrs/jackson-jaxrs-json-provider/2.12.7/jackson-jaxrs-json-provider-2.12.7.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/sun/jersey/jersey-client/1.19.4/jersey-client-1.19.4.jar (134 kB at 50 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jaxrs/jackson-jaxrs-base/2.12.7/jackson-jaxrs-base-2.12.7.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/module/jackson-module-jaxb-annotations/2.12.7/jackson-module-jaxb-annotations-2.12.7.jar (37 kB at 13 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/hadoop-mapreduce-client-jobclient/3.3.6/hadoop-mapreduce-client-jobclient-3.3.6.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/jakarta/xml/bind/jakarta.xml.bind-api/2.3.2/jakarta.xml.bind-api-2.3.2.jar (115 kB at 42 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/hadoop-mapreduce-client-common/3.3.6/hadoop-mapreduce-client-common-3.3.6.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jaxrs/jackson-jaxrs-base/2.12.7/jackson-jaxrs-base-2.12.7.jar (36 kB at 13 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/hadoop-annotations/3.3.6/hadoop-annotations-3.3.6.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jaxrs/jackson-jaxrs-json-provider/2.12.7/jackson-jaxrs-json-provider-2.12.7.jar (16 kB at 5.8 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/hadoop-mapreduce-client-jobclient/3.3.6/hadoop-mapreduce-client-jobclient-3.3.6.jar (50 kB at 18 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/hadoop-mapreduce-client-common/3.3.6/hadoop-mapreduce-client-common-3.3.6.jar (806 kB at 272 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/hadoop-annotations/3.3.6/hadoop-annotations-3.3.6.jar (25 kB at 8.5 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/hadoop-yarn-common/3.3.6/hadoop-yarn-common-3.3.6.jar (3.0 MB at 980 kB/s)
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ conditional-filter ---
+[INFO] Deleting /Users/luan/Documents/DLL-Bigdata/target
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ conditional-filter ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ conditional-filter ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 6 source files with javac [debug release 8] to target/classes
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ conditional-filter ---
+[INFO] skip non existing resourceDirectory /Users/luan/Documents/DLL-Bigdata/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ conditional-filter ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug release 8] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.5.2:test (default-test) @ conditional-filter ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.example.filter.FilterTest
+10:05:00 WARN  NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+10:05:00 WARN  MetricsConfig: Cannot locate configuration: tried hadoop-metrics2-jobtracker.properties,hadoop-metrics2.properties
+10:05:00 INFO  MetricsSystemImpl: Scheduled Metric snapshot period at 10 second(s).
+10:05:00 INFO  MetricsSystemImpl: JobTracker metrics system started
+10:05:00 WARN  JobResourceUploader: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+10:05:00 WARN  JobResourceUploader: No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+10:05:00 INFO  FileInputFormat: Total input files to process : 1
+10:05:00 INFO  JobSubmitter: number of splits:1
+10:05:00 INFO  JobSubmitter: Submitting tokens for job: job_local1724828416_0001
+10:05:00 INFO  JobSubmitter: Executing with tokens: []
+10:05:00 INFO  Job: The url to track the job: http://localhost:8080/
+10:05:00 INFO  Job: Running job: job_local1724828416_0001
+10:05:00 INFO  LocalJobRunner: OutputCommitter set in config null
+10:05:00 INFO  PathOutputCommitterFactory: No output committer factory defined, defaulting to FileOutputCommitterFactory
+10:05:00 INFO  FileOutputCommitter: File Output Committer Algorithm version is 2
+10:05:00 INFO  FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+10:05:00 INFO  LocalJobRunner: OutputCommitter is org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+10:05:00 INFO  LocalJobRunner: Waiting for map tasks
+10:05:00 INFO  LocalJobRunner: Starting task: attempt_local1724828416_0001_m_000000_0
+10:05:00 INFO  PathOutputCommitterFactory: No output committer factory defined, defaulting to FileOutputCommitterFactory
+10:05:00 INFO  FileOutputCommitter: File Output Committer Algorithm version is 2
+10:05:00 INFO  FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+10:05:00 INFO  ProcfsBasedProcessTree: ProcfsBasedProcessTree currently is supported only on Linux.
+10:05:00 INFO  Task:  Using ResourceCalculatorProcessTree : null
+10:05:00 INFO  MapTask: Processing split: file:/Users/luan/Documents/DLL-Bigdata/data/orders-edge.csv:0+959
+10:05:00 INFO  MapTask: (EQUATOR) 0 kvi 26214396(104857584)
+10:05:00 INFO  MapTask: mapreduce.task.io.sort.mb: 100
+10:05:00 INFO  MapTask: soft limit at 83886080
+10:05:00 INFO  MapTask: bufstart = 0; bufvoid = 104857600
+10:05:00 INFO  MapTask: kvstart = 26214396; length = 6553600
+10:05:00 INFO  MapTask: Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+10:05:00 INFO  MapTask: Starting flush of map output
+10:05:00 INFO  MapTask: Spilling map output
+10:05:00 INFO  MapTask: bufstart = 0; bufend = 500; bufvoid = 104857600
+10:05:00 INFO  MapTask: kvstart = 26214396(104857584); kvend = 26214364(104857456); length = 33/6553600
+10:05:00 INFO  MapTask: Finished spill 0
+10:05:00 INFO  LocalJobRunner: map task executor complete.
+10:05:00 WARN  LocalJobRunner: job_local1724828416_0001
+java.lang.Exception: java.io.UncheckedIOException: IOException reading next record: java.io.IOException: (startline 1) EOF reached before encapsulated token finished
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.runTasks(LocalJobRunner.java:492)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.run(LocalJobRunner.java:552)
+Caused by: java.io.UncheckedIOException: IOException reading next record: java.io.IOException: (startline 1) EOF reached before encapsulated token finished
+	at org.apache.commons.csv.CSVParser$CSVRecordIterator.getNextRecord(CSVParser.java:150)
+	at org.apache.commons.csv.CSVParser$CSVRecordIterator.hasNext(CSVParser.java:160)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:132)
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+	at org.apache.commons.csv.CSVParser.getRecords(CSVParser.java:650)
+	at com.example.filter.Order.parse(Order.java:37)
+	at com.example.filter.OrderFilterMapper.map(OrderFilterMapper.java:32)
+	at com.example.filter.OrderFilterMapper.map(OrderFilterMapper.java:8)
+	at org.apache.hadoop.mapreduce.Mapper.run(Mapper.java:146)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:800)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:348)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:271)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.io.IOException: (startline 1) EOF reached before encapsulated token finished
+	at org.apache.commons.csv.Lexer.parseEncapsulatedToken(Lexer.java:376)
+	at org.apache.commons.csv.Lexer.nextToken(Lexer.java:290)
+	at org.apache.commons.csv.CSVParser.nextRecord(CSVParser.java:770)
+	at org.apache.commons.csv.CSVParser$CSVRecordIterator.getNextRecord(CSVParser.java:148)
+	... 21 more
+10:05:01 INFO  Job: Job job_local1724828416_0001 running in uber mode : false
+10:05:01 INFO  Job:  map 0% reduce 0%
+10:05:01 INFO  Job: Job job_local1724828416_0001 failed with state FAILED due to: NA
+10:05:01 INFO  Job: Counters: 0
+INPUT_RECORDS=0
+HEADER_LINES=0
+EMPTY_LINES=0
+INVALID_RECORDS=0
+MAP_MATCHED=0
+MAP_REJECTED=0
+CUSTOMERS_ACCEPTED=0
+CUSTOMERS_REJECTED=0
+OUTPUT_RECORDS=0
+GROUP_REJECTED_RECORDS=0
+10:05:01 WARN  MetricsSystemImpl: JobTracker metrics system already initialized!
+10:05:01 WARN  JobResourceUploader: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+10:05:01 WARN  JobResourceUploader: No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+10:05:01 INFO  FileInputFormat: Total input files to process : 1
+10:05:01 INFO  JobSubmitter: number of splits:1
+10:05:01 INFO  JobSubmitter: Submitting tokens for job: job_local1135621307_0002
+10:05:01 INFO  JobSubmitter: Executing with tokens: []
+10:05:01 INFO  Job: The url to track the job: http://localhost:8080/
+10:05:01 INFO  LocalJobRunner: OutputCommitter set in config null
+10:05:01 INFO  Job: Running job: job_local1135621307_0002
+10:05:01 INFO  PathOutputCommitterFactory: No output committer factory defined, defaulting to FileOutputCommitterFactory
+10:05:01 INFO  FileOutputCommitter: File Output Committer Algorithm version is 2
+10:05:01 INFO  FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+10:05:01 INFO  LocalJobRunner: OutputCommitter is org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+10:05:01 INFO  LocalJobRunner: Waiting for map tasks
+10:05:01 INFO  LocalJobRunner: Starting task: attempt_local1135621307_0002_m_000000_0
+10:05:01 INFO  PathOutputCommitterFactory: No output committer factory defined, defaulting to FileOutputCommitterFactory
+10:05:01 INFO  FileOutputCommitter: File Output Committer Algorithm version is 2
+10:05:01 INFO  FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+10:05:01 INFO  ProcfsBasedProcessTree: ProcfsBasedProcessTree currently is supported only on Linux.
+10:05:01 INFO  Task:  Using ResourceCalculatorProcessTree : null
+10:05:01 INFO  MapTask: Processing split: file:/Users/luan/Documents/DLL-Bigdata/data/orders.csv:0+832
+10:05:01 INFO  MapTask: (EQUATOR) 0 kvi 26214396(104857584)
+10:05:01 INFO  MapTask: mapreduce.task.io.sort.mb: 100
+10:05:01 INFO  MapTask: soft limit at 83886080
+10:05:01 INFO  MapTask: bufstart = 0; bufvoid = 104857600
+10:05:01 INFO  MapTask: kvstart = 26214396; length = 6553600
+10:05:01 INFO  MapTask: Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+10:05:01 INFO  LocalJobRunner: 
+10:05:01 INFO  MapTask: Starting flush of map output
+10:05:01 INFO  MapTask: Spilling map output
+10:05:01 INFO  MapTask: bufstart = 0; bufend = 408; bufvoid = 104857600
+10:05:01 INFO  MapTask: kvstart = 26214396(104857584); kvend = 26214368(104857472); length = 29/6553600
+10:05:01 INFO  MapTask: Finished spill 0
+10:05:01 INFO  Task: Task:attempt_local1135621307_0002_m_000000_0 is done. And is in the process of committing
+10:05:01 INFO  LocalJobRunner: map
+10:05:01 INFO  Task: Task 'attempt_local1135621307_0002_m_000000_0' done.
+10:05:01 INFO  Task: Final Counters for attempt_local1135621307_0002_m_000000_0: Counters: 22
+	File System Counters
+		FILE: Number of bytes read=2146
+		FILE: Number of bytes written=825793
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=18
+		Map output records=8
+		Map output bytes=408
+		Map output materialized bytes=430
+		Input split bytes=119
+		Combine input records=0
+		Spilled Records=8
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=4
+		Total committed heap usage (bytes)=268435456
+	com.example.filter.FilterCounters
+		HEADER_LINES=1
+		INPUT_RECORDS=17
+		INVALID_RECORDS=3
+		MAP_MATCHED=8
+		MAP_REJECTED=6
+	File Input Format Counters 
+		Bytes Read=832
+10:05:01 INFO  LocalJobRunner: Finishing task: attempt_local1135621307_0002_m_000000_0
+10:05:01 INFO  LocalJobRunner: map task executor complete.
+10:05:01 INFO  LocalJobRunner: Waiting for reduce tasks
+10:05:01 INFO  LocalJobRunner: Starting task: attempt_local1135621307_0002_r_000000_0
+10:05:01 INFO  PathOutputCommitterFactory: No output committer factory defined, defaulting to FileOutputCommitterFactory
+10:05:01 INFO  FileOutputCommitter: File Output Committer Algorithm version is 2
+10:05:01 INFO  FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+10:05:01 INFO  ProcfsBasedProcessTree: ProcfsBasedProcessTree currently is supported only on Linux.
+10:05:01 INFO  Task:  Using ResourceCalculatorProcessTree : null
+10:05:01 INFO  ReduceTask: Using ShuffleConsumerPlugin: org.apache.hadoop.mapreduce.task.reduce.Shuffle@6fca2d1e
+10:05:01 WARN  MetricsSystemImpl: JobTracker metrics system already initialized!
+10:05:01 INFO  MergeManagerImpl: MergerManager: memoryLimit=3006477056, maxSingleShuffleLimit=751619264, mergeThreshold=1984274944, ioSortFactor=10, memToMemMergeOutputsThreshold=10
+10:05:01 INFO  EventFetcher: attempt_local1135621307_0002_r_000000_0 Thread started: EventFetcher for fetching Map Completion Events
+10:05:02 INFO  LocalFetcher: localfetcher#1 about to shuffle output of map attempt_local1135621307_0002_m_000000_0 decomp: 426 len: 430 to MEMORY
+10:05:02 INFO  InMemoryMapOutput: Read 426 bytes from map-output for attempt_local1135621307_0002_m_000000_0
+10:05:02 INFO  MergeManagerImpl: closeInMemoryFile -> map-output of size: 426, inMemoryMapOutputs.size() -> 1, commitMemory -> 0, usedMemory ->426
+10:05:02 INFO  EventFetcher: EventFetcher is interrupted.. Returning
+10:05:02 INFO  LocalJobRunner: 1 / 1 copied.
+10:05:02 INFO  MergeManagerImpl: finalMerge called with 1 in-memory map-outputs and 0 on-disk map-outputs
+10:05:02 INFO  Merger: Merging 1 sorted segments
+10:05:02 INFO  Merger: Down to the last merge-pass, with 1 segments left of total size: 419 bytes
+10:05:02 INFO  MergeManagerImpl: Merged 1 segments, 426 bytes to disk to satisfy reduce memory limit
+10:05:02 INFO  MergeManagerImpl: Merging 1 files, 430 bytes from disk
+10:05:02 INFO  MergeManagerImpl: Merging 0 segments, 0 bytes from memory into reduce
+10:05:02 INFO  Merger: Merging 1 sorted segments
+10:05:02 INFO  Merger: Down to the last merge-pass, with 1 segments left of total size: 419 bytes
+10:05:02 INFO  LocalJobRunner: 1 / 1 copied.
+10:05:02 INFO  deprecation: mapred.skip.on is deprecated. Instead, use mapreduce.job.skiprecords
+10:05:02 INFO  Task: Task:attempt_local1135621307_0002_r_000000_0 is done. And is in the process of committing
+10:05:02 INFO  LocalJobRunner: 1 / 1 copied.
+10:05:02 INFO  Task: Task attempt_local1135621307_0002_r_000000_0 is allowed to commit now
+10:05:02 INFO  FileOutputCommitter: Saved output of task 'attempt_local1135621307_0002_r_000000_0' to file:/var/folders/qs/9ttk6hc14t7212d0f_lxfv1h0000gn/T/junit-1468904238636383577/result
+10:05:02 INFO  LocalJobRunner: reduce > reduce
+10:05:02 INFO  Task: Task 'attempt_local1135621307_0002_r_000000_0' done.
+10:05:02 INFO  Task: Final Counters for attempt_local1135621307_0002_r_000000_0: Counters: 28
+	File System Counters
+		FILE: Number of bytes read=3038
+		FILE: Number of bytes written=826375
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=3
+		Reduce shuffle bytes=430
+		Reduce input records=8
+		Reduce output records=3
+		Spilled Records=8
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=0
+		Total committed heap usage (bytes)=268435456
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	com.example.filter.FilterCounters
+		CUSTOMERS_ACCEPTED=1
+		CUSTOMERS_REJECTED=2
+		GROUP_REJECTED_RECORDS=5
+		OUTPUT_RECORDS=3
+	File Output Format Counters 
+		Bytes Written=152
+10:05:02 INFO  LocalJobRunner: Finishing task: attempt_local1135621307_0002_r_000000_0
+10:05:02 INFO  LocalJobRunner: reduce task executor complete.
+10:05:02 INFO  Job: Job job_local1135621307_0002 running in uber mode : false
+10:05:02 INFO  Job:  map 100% reduce 100%
+10:05:02 INFO  Job: Job job_local1135621307_0002 completed successfully
+10:05:02 INFO  Job: Counters: 39
+	File System Counters
+		FILE: Number of bytes read=5184
+		FILE: Number of bytes written=1652168
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=18
+		Map output records=8
+		Map output bytes=408
+		Map output materialized bytes=430
+		Input split bytes=119
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=3
+		Reduce shuffle bytes=430
+		Reduce input records=8
+		Reduce output records=3
+		Spilled Records=16
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=4
+		Total committed heap usage (bytes)=536870912
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	com.example.filter.FilterCounters
+		CUSTOMERS_ACCEPTED=1
+		CUSTOMERS_REJECTED=2
+		GROUP_REJECTED_RECORDS=5
+		HEADER_LINES=1
+		INPUT_RECORDS=17
+		INVALID_RECORDS=3
+		MAP_MATCHED=8
+		MAP_REJECTED=6
+		OUTPUT_RECORDS=3
+	File Input Format Counters 
+		Bytes Read=832
+	File Output Format Counters 
+		Bytes Written=152
+INPUT_RECORDS=17
+HEADER_LINES=1
+EMPTY_LINES=0
+INVALID_RECORDS=3
+MAP_MATCHED=8
+MAP_REJECTED=6
+CUSTOMERS_ACCEPTED=1
+CUSTOMERS_REJECTED=2
+OUTPUT_RECORDS=3
+GROUP_REJECTED_RECORDS=5
+JOB_ELAPSED_MS=1223
+10:05:03 WARN  MetricsSystemImpl: JobTracker metrics system already initialized!
+10:05:03 WARN  JobResourceUploader: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+10:05:03 WARN  JobResourceUploader: No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+10:05:03 INFO  FileInputFormat: Total input files to process : 2
+10:05:03 INFO  JobSubmitter: number of splits:2
+10:05:03 INFO  JobSubmitter: Submitting tokens for job: job_local472464353_0003
+10:05:03 INFO  JobSubmitter: Executing with tokens: []
+10:05:03 INFO  Job: The url to track the job: http://localhost:8080/
+10:05:03 INFO  LocalJobRunner: OutputCommitter set in config null
+10:05:03 INFO  Job: Running job: job_local472464353_0003
+10:05:03 INFO  PathOutputCommitterFactory: No output committer factory defined, defaulting to FileOutputCommitterFactory
+10:05:03 INFO  FileOutputCommitter: File Output Committer Algorithm version is 2
+10:05:03 INFO  FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+10:05:03 INFO  LocalJobRunner: OutputCommitter is org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+10:05:03 INFO  LocalJobRunner: Waiting for map tasks
+10:05:03 INFO  LocalJobRunner: Starting task: attempt_local472464353_0003_m_000000_0
+10:05:03 INFO  PathOutputCommitterFactory: No output committer factory defined, defaulting to FileOutputCommitterFactory
+10:05:03 INFO  FileOutputCommitter: File Output Committer Algorithm version is 2
+10:05:03 INFO  FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+10:05:03 INFO  ProcfsBasedProcessTree: ProcfsBasedProcessTree currently is supported only on Linux.
+10:05:03 INFO  Task:  Using ResourceCalculatorProcessTree : null
+10:05:03 INFO  MapTask: Processing split: file:/var/folders/qs/9ttk6hc14t7212d0f_lxfv1h0000gn/T/junit-675524860578133980/input/b.csv:0+139
+10:05:03 INFO  MapTask: (EQUATOR) 0 kvi 26214396(104857584)
+10:05:03 INFO  MapTask: mapreduce.task.io.sort.mb: 100
+10:05:03 INFO  MapTask: soft limit at 83886080
+10:05:03 INFO  MapTask: bufstart = 0; bufvoid = 104857600
+10:05:03 INFO  MapTask: kvstart = 26214396; length = 6553600
+10:05:03 INFO  MapTask: Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+10:05:03 INFO  LocalJobRunner: 
+10:05:03 INFO  MapTask: Starting flush of map output
+10:05:03 INFO  MapTask: Spilling map output
+10:05:03 INFO  MapTask: bufstart = 0; bufend = 82; bufvoid = 104857600
+10:05:03 INFO  MapTask: kvstart = 26214396(104857584); kvend = 26214392(104857568); length = 5/6553600
+10:05:03 INFO  MapTask: Finished spill 0
+10:05:03 INFO  Task: Task:attempt_local472464353_0003_m_000000_0 is done. And is in the process of committing
+10:05:03 INFO  LocalJobRunner: map
+10:05:03 INFO  Task: Task 'attempt_local472464353_0003_m_000000_0' done.
+10:05:03 INFO  Task: Final Counters for attempt_local472464353_0003_m_000000_0: Counters: 20
+	File System Counters
+		FILE: Number of bytes read=3556
+		FILE: Number of bytes written=1237539
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=3
+		Map output records=2
+		Map output bytes=82
+		Map output materialized bytes=92
+		Input split bytes=155
+		Combine input records=0
+		Spilled Records=2
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=2
+		Total committed heap usage (bytes)=268435456
+	com.example.filter.FilterCounters
+		HEADER_LINES=1
+		INPUT_RECORDS=2
+		MAP_MATCHED=2
+	File Input Format Counters 
+		Bytes Read=139
+10:05:03 INFO  LocalJobRunner: Finishing task: attempt_local472464353_0003_m_000000_0
+10:05:03 INFO  LocalJobRunner: Starting task: attempt_local472464353_0003_m_000001_0
+10:05:03 INFO  PathOutputCommitterFactory: No output committer factory defined, defaulting to FileOutputCommitterFactory
+10:05:03 INFO  FileOutputCommitter: File Output Committer Algorithm version is 2
+10:05:03 INFO  FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+10:05:03 INFO  ProcfsBasedProcessTree: ProcfsBasedProcessTree currently is supported only on Linux.
+10:05:03 INFO  Task:  Using ResourceCalculatorProcessTree : null
+10:05:03 INFO  MapTask: Processing split: file:/var/folders/qs/9ttk6hc14t7212d0f_lxfv1h0000gn/T/junit-675524860578133980/input/a.csv:0+100
+10:05:03 INFO  MapTask: (EQUATOR) 0 kvi 26214396(104857584)
+10:05:03 INFO  MapTask: mapreduce.task.io.sort.mb: 100
+10:05:03 INFO  MapTask: soft limit at 83886080
+10:05:03 INFO  MapTask: bufstart = 0; bufvoid = 104857600
+10:05:03 INFO  MapTask: kvstart = 26214396; length = 6553600
+10:05:03 INFO  MapTask: Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+10:05:03 INFO  LocalJobRunner: 
+10:05:03 INFO  MapTask: Starting flush of map output
+10:05:03 INFO  MapTask: Spilling map output
+10:05:03 INFO  MapTask: bufstart = 0; bufend = 41; bufvoid = 104857600
+10:05:03 INFO  MapTask: kvstart = 26214396(104857584); kvend = 26214396(104857584); length = 1/6553600
+10:05:03 INFO  MapTask: Finished spill 0
+10:05:03 INFO  Task: Task:attempt_local472464353_0003_m_000001_0 is done. And is in the process of committing
+10:05:03 INFO  LocalJobRunner: map
+10:05:03 INFO  Task: Task 'attempt_local472464353_0003_m_000001_0' done.
+10:05:03 INFO  Task: Final Counters for attempt_local472464353_0003_m_000001_0: Counters: 20
+	File System Counters
+		FILE: Number of bytes read=3985
+		FILE: Number of bytes written=1237620
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=2
+		Map output records=1
+		Map output bytes=41
+		Map output materialized bytes=49
+		Input split bytes=155
+		Combine input records=0
+		Spilled Records=1
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=2
+		Total committed heap usage (bytes)=268435456
+	com.example.filter.FilterCounters
+		HEADER_LINES=1
+		INPUT_RECORDS=1
+		MAP_MATCHED=1
+	File Input Format Counters 
+		Bytes Read=100
+10:05:03 INFO  LocalJobRunner: Finishing task: attempt_local472464353_0003_m_000001_0
+10:05:03 INFO  LocalJobRunner: map task executor complete.
+10:05:03 INFO  LocalJobRunner: Waiting for reduce tasks
+10:05:03 INFO  LocalJobRunner: Starting task: attempt_local472464353_0003_r_000000_0
+10:05:03 INFO  PathOutputCommitterFactory: No output committer factory defined, defaulting to FileOutputCommitterFactory
+10:05:03 INFO  FileOutputCommitter: File Output Committer Algorithm version is 2
+10:05:03 INFO  FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+10:05:03 INFO  ProcfsBasedProcessTree: ProcfsBasedProcessTree currently is supported only on Linux.
+10:05:03 INFO  Task:  Using ResourceCalculatorProcessTree : null
+10:05:03 INFO  ReduceTask: Using ShuffleConsumerPlugin: org.apache.hadoop.mapreduce.task.reduce.Shuffle@29ff27df
+10:05:03 WARN  MetricsSystemImpl: JobTracker metrics system already initialized!
+10:05:03 INFO  MergeManagerImpl: MergerManager: memoryLimit=3006477056, maxSingleShuffleLimit=751619264, mergeThreshold=1984274944, ioSortFactor=10, memToMemMergeOutputsThreshold=10
+10:05:03 INFO  EventFetcher: attempt_local472464353_0003_r_000000_0 Thread started: EventFetcher for fetching Map Completion Events
+10:05:03 INFO  LocalFetcher: localfetcher#2 about to shuffle output of map attempt_local472464353_0003_m_000000_0 decomp: 88 len: 92 to MEMORY
+10:05:03 INFO  InMemoryMapOutput: Read 88 bytes from map-output for attempt_local472464353_0003_m_000000_0
+10:05:03 INFO  MergeManagerImpl: closeInMemoryFile -> map-output of size: 88, inMemoryMapOutputs.size() -> 1, commitMemory -> 0, usedMemory ->88
+10:05:03 INFO  LocalFetcher: localfetcher#2 about to shuffle output of map attempt_local472464353_0003_m_000001_0 decomp: 45 len: 49 to MEMORY
+10:05:03 INFO  InMemoryMapOutput: Read 45 bytes from map-output for attempt_local472464353_0003_m_000001_0
+10:05:03 INFO  MergeManagerImpl: closeInMemoryFile -> map-output of size: 45, inMemoryMapOutputs.size() -> 2, commitMemory -> 88, usedMemory ->133
+10:05:03 INFO  EventFetcher: EventFetcher is interrupted.. Returning
+10:05:03 INFO  LocalJobRunner: 2 / 2 copied.
+10:05:03 INFO  MergeManagerImpl: finalMerge called with 2 in-memory map-outputs and 0 on-disk map-outputs
+10:05:03 INFO  Merger: Merging 2 sorted segments
+10:05:03 INFO  Merger: Down to the last merge-pass, with 2 segments left of total size: 125 bytes
+10:05:03 INFO  MergeManagerImpl: Merged 2 segments, 133 bytes to disk to satisfy reduce memory limit
+10:05:03 INFO  MergeManagerImpl: Merging 1 files, 135 bytes from disk
+10:05:03 INFO  MergeManagerImpl: Merging 0 segments, 0 bytes from memory into reduce
+10:05:03 INFO  Merger: Merging 1 sorted segments
+10:05:03 INFO  Merger: Down to the last merge-pass, with 1 segments left of total size: 127 bytes
+10:05:03 INFO  LocalJobRunner: 2 / 2 copied.
+10:05:03 INFO  Task: Task:attempt_local472464353_0003_r_000000_0 is done. And is in the process of committing
+10:05:03 INFO  LocalJobRunner: 2 / 2 copied.
+10:05:03 INFO  Task: Task attempt_local472464353_0003_r_000000_0 is allowed to commit now
+10:05:03 INFO  FileOutputCommitter: Saved output of task 'attempt_local472464353_0003_r_000000_0' to file:/var/folders/qs/9ttk6hc14t7212d0f_lxfv1h0000gn/T/junit-675524860578133980/joined
+10:05:03 INFO  LocalJobRunner: reduce > reduce
+10:05:03 INFO  Task: Task 'attempt_local472464353_0003_r_000000_0' done.
+10:05:03 INFO  Task: Final Counters for attempt_local472464353_0003_r_000000_0: Counters: 26
+	File System Counters
+		FILE: Number of bytes read=4325
+		FILE: Number of bytes written=1237884
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=1
+		Reduce shuffle bytes=141
+		Reduce input records=3
+		Reduce output records=3
+		Spilled Records=3
+		Shuffled Maps =2
+		Failed Shuffles=0
+		Merged Map outputs=2
+		GC time elapsed (ms)=0
+		Total committed heap usage (bytes)=268435456
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	com.example.filter.FilterCounters
+		CUSTOMERS_ACCEPTED=1
+		OUTPUT_RECORDS=3
+	File Output Format Counters 
+		Bytes Written=129
+10:05:03 INFO  LocalJobRunner: Finishing task: attempt_local472464353_0003_r_000000_0
+10:05:03 INFO  LocalJobRunner: reduce task executor complete.
+10:05:04 INFO  Job: Job job_local472464353_0003 running in uber mode : false
+10:05:04 INFO  Job:  map 100% reduce 100%
+10:05:04 INFO  Job: Job job_local472464353_0003 completed successfully
+10:05:04 INFO  Job: Counters: 35
+	File System Counters
+		FILE: Number of bytes read=11866
+		FILE: Number of bytes written=3713043
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=5
+		Map output records=3
+		Map output bytes=123
+		Map output materialized bytes=141
+		Input split bytes=310
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=1
+		Reduce shuffle bytes=141
+		Reduce input records=3
+		Reduce output records=3
+		Spilled Records=6
+		Shuffled Maps =2
+		Failed Shuffles=0
+		Merged Map outputs=2
+		GC time elapsed (ms)=4
+		Total committed heap usage (bytes)=805306368
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	com.example.filter.FilterCounters
+		CUSTOMERS_ACCEPTED=1
+		HEADER_LINES=2
+		INPUT_RECORDS=3
+		MAP_MATCHED=3
+		OUTPUT_RECORDS=3
+	File Input Format Counters 
+		Bytes Read=239
+	File Output Format Counters 
+		Bytes Written=129
+INPUT_RECORDS=3
+HEADER_LINES=2
+EMPTY_LINES=0
+INVALID_RECORDS=0
+MAP_MATCHED=3
+MAP_REJECTED=0
+CUSTOMERS_ACCEPTED=1
+CUSTOMERS_REJECTED=0
+OUTPUT_RECORDS=3
+GROUP_REJECTED_RECORDS=0
+JOB_ELAPSED_MS=1149
+10:05:04 WARN  MetricsSystemImpl: JobTracker metrics system already initialized!
+10:05:04 WARN  JobResourceUploader: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+10:05:04 WARN  JobResourceUploader: No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+10:05:04 INFO  FileInputFormat: Total input files to process : 2
+10:05:04 INFO  JobSubmitter: number of splits:2
+10:05:04 INFO  JobSubmitter: Submitting tokens for job: job_local1330973379_0004
+10:05:04 INFO  JobSubmitter: Executing with tokens: []
+10:05:04 INFO  Job: The url to track the job: http://localhost:8080/
+10:05:04 INFO  LocalJobRunner: OutputCommitter set in config null
+10:05:04 INFO  Job: Running job: job_local1330973379_0004
+10:05:04 INFO  PathOutputCommitterFactory: No output committer factory defined, defaulting to FileOutputCommitterFactory
+10:05:04 INFO  FileOutputCommitter: File Output Committer Algorithm version is 2
+10:05:04 INFO  FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+10:05:04 INFO  LocalJobRunner: OutputCommitter is org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+10:05:04 INFO  LocalJobRunner: Waiting for map tasks
+10:05:04 INFO  LocalJobRunner: Starting task: attempt_local1330973379_0004_m_000000_0
+10:05:04 INFO  PathOutputCommitterFactory: No output committer factory defined, defaulting to FileOutputCommitterFactory
+10:05:04 INFO  FileOutputCommitter: File Output Committer Algorithm version is 2
+10:05:04 INFO  FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+10:05:04 INFO  ProcfsBasedProcessTree: ProcfsBasedProcessTree currently is supported only on Linux.
+10:05:04 INFO  Task:  Using ResourceCalculatorProcessTree : null
+10:05:04 INFO  MapTask: Processing split: file:/var/folders/qs/9ttk6hc14t7212d0f_lxfv1h0000gn/T/junit-675524860578133980/input/b.csv:0+139
+10:05:04 INFO  MapTask: (EQUATOR) 0 kvi 26214396(104857584)
+10:05:04 INFO  MapTask: mapreduce.task.io.sort.mb: 100
+10:05:04 INFO  MapTask: soft limit at 83886080
+10:05:04 INFO  MapTask: bufstart = 0; bufvoid = 104857600
+10:05:04 INFO  MapTask: kvstart = 26214396; length = 6553600
+10:05:04 INFO  MapTask: Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+10:05:04 INFO  LocalJobRunner: 
+10:05:04 INFO  MapTask: Starting flush of map output
+10:05:04 INFO  MapTask: Spilling map output
+10:05:04 INFO  MapTask: bufstart = 0; bufend = 82; bufvoid = 104857600
+10:05:04 INFO  MapTask: kvstart = 26214396(104857584); kvend = 26214392(104857568); length = 5/6553600
+10:05:04 INFO  MapTask: Finished spill 0
+10:05:04 INFO  Task: Task:attempt_local1330973379_0004_m_000000_0 is done. And is in the process of committing
+10:05:04 INFO  LocalJobRunner: map
+10:05:04 INFO  Task: Task 'attempt_local1330973379_0004_m_000000_0' done.
+10:05:04 INFO  Task: Final Counters for attempt_local1330973379_0004_m_000000_0: Counters: 20
+	File System Counters
+		FILE: Number of bytes read=4843
+		FILE: Number of bytes written=1651364
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=3
+		Map output records=2
+		Map output bytes=82
+		Map output materialized bytes=92
+		Input split bytes=155
+		Combine input records=0
+		Spilled Records=2
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=3
+		Total committed heap usage (bytes)=268435456
+	com.example.filter.FilterCounters
+		HEADER_LINES=1
+		INPUT_RECORDS=2
+		MAP_MATCHED=2
+	File Input Format Counters 
+		Bytes Read=139
+10:05:04 INFO  LocalJobRunner: Finishing task: attempt_local1330973379_0004_m_000000_0
+10:05:04 INFO  LocalJobRunner: Starting task: attempt_local1330973379_0004_m_000001_0
+10:05:04 INFO  PathOutputCommitterFactory: No output committer factory defined, defaulting to FileOutputCommitterFactory
+10:05:04 INFO  FileOutputCommitter: File Output Committer Algorithm version is 2
+10:05:04 INFO  FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+10:05:04 INFO  ProcfsBasedProcessTree: ProcfsBasedProcessTree currently is supported only on Linux.
+10:05:04 INFO  Task:  Using ResourceCalculatorProcessTree : null
+10:05:04 INFO  MapTask: Processing split: file:/var/folders/qs/9ttk6hc14t7212d0f_lxfv1h0000gn/T/junit-675524860578133980/input/a.csv:0+100
+10:05:04 INFO  MapTask: (EQUATOR) 0 kvi 26214396(104857584)
+10:05:04 INFO  MapTask: mapreduce.task.io.sort.mb: 100
+10:05:04 INFO  MapTask: soft limit at 83886080
+10:05:04 INFO  MapTask: bufstart = 0; bufvoid = 104857600
+10:05:04 INFO  MapTask: kvstart = 26214396; length = 6553600
+10:05:04 INFO  MapTask: Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+10:05:04 INFO  LocalJobRunner: 
+10:05:04 INFO  MapTask: Starting flush of map output
+10:05:04 INFO  MapTask: Spilling map output
+10:05:04 INFO  MapTask: bufstart = 0; bufend = 41; bufvoid = 104857600
+10:05:04 INFO  MapTask: kvstart = 26214396(104857584); kvend = 26214396(104857584); length = 1/6553600
+10:05:04 INFO  MapTask: Finished spill 0
+10:05:04 INFO  Task: Task:attempt_local1330973379_0004_m_000001_0 is done. And is in the process of committing
+10:05:04 INFO  LocalJobRunner: map
+10:05:04 INFO  Task: Task 'attempt_local1330973379_0004_m_000001_0' done.
+10:05:04 INFO  Task: Final Counters for attempt_local1330973379_0004_m_000001_0: Counters: 20
+	File System Counters
+		FILE: Number of bytes read=5272
+		FILE: Number of bytes written=1651445
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=2
+		Map output records=1
+		Map output bytes=41
+		Map output materialized bytes=49
+		Input split bytes=155
+		Combine input records=0
+		Spilled Records=1
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=2
+		Total committed heap usage (bytes)=268435456
+	com.example.filter.FilterCounters
+		HEADER_LINES=1
+		INPUT_RECORDS=1
+		MAP_MATCHED=1
+	File Input Format Counters 
+		Bytes Read=100
+10:05:04 INFO  LocalJobRunner: Finishing task: attempt_local1330973379_0004_m_000001_0
+10:05:04 INFO  LocalJobRunner: map task executor complete.
+10:05:04 INFO  LocalJobRunner: Waiting for reduce tasks
+10:05:04 INFO  LocalJobRunner: Starting task: attempt_local1330973379_0004_r_000000_0
+10:05:04 INFO  PathOutputCommitterFactory: No output committer factory defined, defaulting to FileOutputCommitterFactory
+10:05:04 INFO  FileOutputCommitter: File Output Committer Algorithm version is 2
+10:05:04 INFO  FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+10:05:04 INFO  ProcfsBasedProcessTree: ProcfsBasedProcessTree currently is supported only on Linux.
+10:05:04 INFO  Task:  Using ResourceCalculatorProcessTree : null
+10:05:04 INFO  ReduceTask: Using ShuffleConsumerPlugin: org.apache.hadoop.mapreduce.task.reduce.Shuffle@4f1c465f
+10:05:04 WARN  MetricsSystemImpl: JobTracker metrics system already initialized!
+10:05:04 INFO  MergeManagerImpl: MergerManager: memoryLimit=3006477056, maxSingleShuffleLimit=751619264, mergeThreshold=1984274944, ioSortFactor=10, memToMemMergeOutputsThreshold=10
+10:05:04 INFO  EventFetcher: attempt_local1330973379_0004_r_000000_0 Thread started: EventFetcher for fetching Map Completion Events
+10:05:04 INFO  LocalFetcher: localfetcher#3 about to shuffle output of map attempt_local1330973379_0004_m_000000_0 decomp: 88 len: 92 to MEMORY
+10:05:04 INFO  InMemoryMapOutput: Read 88 bytes from map-output for attempt_local1330973379_0004_m_000000_0
+10:05:04 INFO  MergeManagerImpl: closeInMemoryFile -> map-output of size: 88, inMemoryMapOutputs.size() -> 1, commitMemory -> 0, usedMemory ->88
+10:05:04 INFO  LocalFetcher: localfetcher#3 about to shuffle output of map attempt_local1330973379_0004_m_000001_0 decomp: 45 len: 49 to MEMORY
+10:05:04 INFO  InMemoryMapOutput: Read 45 bytes from map-output for attempt_local1330973379_0004_m_000001_0
+10:05:04 INFO  MergeManagerImpl: closeInMemoryFile -> map-output of size: 45, inMemoryMapOutputs.size() -> 2, commitMemory -> 88, usedMemory ->133
+10:05:04 INFO  EventFetcher: EventFetcher is interrupted.. Returning
+10:05:04 INFO  LocalJobRunner: 2 / 2 copied.
+10:05:04 INFO  MergeManagerImpl: finalMerge called with 2 in-memory map-outputs and 0 on-disk map-outputs
+10:05:04 INFO  Merger: Merging 2 sorted segments
+10:05:04 INFO  Merger: Down to the last merge-pass, with 2 segments left of total size: 125 bytes
+10:05:04 INFO  MergeManagerImpl: Merged 2 segments, 133 bytes to disk to satisfy reduce memory limit
+10:05:04 INFO  MergeManagerImpl: Merging 1 files, 135 bytes from disk
+10:05:04 INFO  MergeManagerImpl: Merging 0 segments, 0 bytes from memory into reduce
+10:05:04 INFO  Merger: Merging 1 sorted segments
+10:05:04 INFO  Merger: Down to the last merge-pass, with 1 segments left of total size: 127 bytes
+10:05:04 INFO  LocalJobRunner: 2 / 2 copied.
+10:05:04 INFO  Task: Task:attempt_local1330973379_0004_r_000000_0 is done. And is in the process of committing
+10:05:04 INFO  LocalJobRunner: 2 / 2 copied.
+10:05:04 INFO  Task: Task attempt_local1330973379_0004_r_000000_0 is allowed to commit now
+10:05:04 INFO  FileOutputCommitter: Saved output of task 'attempt_local1330973379_0004_r_000000_0' to file:/var/folders/qs/9ttk6hc14t7212d0f_lxfv1h0000gn/T/junit-675524860578133980/none
+10:05:04 INFO  LocalJobRunner: reduce > reduce
+10:05:04 INFO  Task: Task 'attempt_local1330973379_0004_r_000000_0' done.
+10:05:04 INFO  Task: Final Counters for attempt_local1330973379_0004_r_000000_0: Counters: 26
+	File System Counters
+		FILE: Number of bytes read=5612
+		FILE: Number of bytes written=1651588
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=1
+		Reduce shuffle bytes=141
+		Reduce input records=3
+		Reduce output records=0
+		Spilled Records=3
+		Shuffled Maps =2
+		Failed Shuffles=0
+		Merged Map outputs=2
+		GC time elapsed (ms)=0
+		Total committed heap usage (bytes)=268435456
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	com.example.filter.FilterCounters
+		CUSTOMERS_REJECTED=1
+		GROUP_REJECTED_RECORDS=3
+	File Output Format Counters 
+		Bytes Written=8
+10:05:04 INFO  LocalJobRunner: Finishing task: attempt_local1330973379_0004_r_000000_0
+10:05:04 INFO  LocalJobRunner: reduce task executor complete.
+10:05:05 INFO  Job: Job job_local1330973379_0004 running in uber mode : false
+10:05:05 INFO  Job:  map 100% reduce 100%
+10:05:05 INFO  Job: Job job_local1330973379_0004 completed successfully
+10:05:05 INFO  Job: Counters: 35
+	File System Counters
+		FILE: Number of bytes read=15727
+		FILE: Number of bytes written=4954397
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=5
+		Map output records=3
+		Map output bytes=123
+		Map output materialized bytes=141
+		Input split bytes=310
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=1
+		Reduce shuffle bytes=141
+		Reduce input records=3
+		Reduce output records=0
+		Spilled Records=6
+		Shuffled Maps =2
+		Failed Shuffles=0
+		Merged Map outputs=2
+		GC time elapsed (ms)=5
+		Total committed heap usage (bytes)=805306368
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	com.example.filter.FilterCounters
+		CUSTOMERS_REJECTED=1
+		GROUP_REJECTED_RECORDS=3
+		HEADER_LINES=2
+		INPUT_RECORDS=3
+		MAP_MATCHED=3
+	File Input Format Counters 
+		Bytes Read=239
+	File Output Format Counters 
+		Bytes Written=8
+INPUT_RECORDS=3
+HEADER_LINES=2
+EMPTY_LINES=0
+INVALID_RECORDS=0
+MAP_MATCHED=3
+MAP_REJECTED=0
+CUSTOMERS_ACCEPTED=0
+CUSTOMERS_REJECTED=1
+OUTPUT_RECORDS=0
+GROUP_REJECTED_RECORDS=3
+JOB_ELAPSED_MS=1149
+[ERROR] Tests run: 5, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 5.390 s <<< FAILURE! -- in com.example.filter.FilterTest
+[ERROR] com.example.filter.FilterTest.duplicateRowsAndExactDecimalGroupThreshold -- Time elapsed: 1.724 s <<< ERROR!
+java.lang.IllegalStateException: MapReduce job failed
+	at com.example.filter.FilterDriver.main(FilterDriver.java:71)
+	at com.example.filter.FilterTest.duplicateRowsAndExactDecimalGroupThreshold(FilterTest.java:64)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   FilterTest.duplicateRowsAndExactDecimalGroupThreshold:64 » IllegalState MapReduce job failed
+[INFO] 
+[ERROR] Tests run: 5, Failures: 0, Errors: 1, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  22.376 s
+[INFO] Finished at: 2026-10-02T10:05:05+07:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.5.2:test (default-test) on project conditional-filter: 
+[ERROR] 
+[ERROR] See /Users/luan/Documents/DLL-Bigdata/target/surefire-reports for the individual test results.
+[ERROR] See dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

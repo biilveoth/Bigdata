@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bài 20 · Lọc dữ liệu đơn hàng</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="/styles.css">
+  <script defer src="/vendor/lucide.min.js"></script>
+  <script defer src="/app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="Bài 20"><span class="brand-mark"><i data-lucide="list-filter"></i></span><span>Bài 20 <span class="brand-divider">/</span> <span class="brand-sub">Dữ liệu lớn</span></span></a>
+    <button class="header-history" id="open-history"><i data-lucide="history"></i>Lịch sử</button>
+    <button class="active-job-button" id="open-active" title="Mở job đang chạy" aria-label="Mở job đang chạy" hidden><i data-lucide="loader-circle"></i><span>Job đang chạy</span></button>
+    <div class="engine" id="engine"><span class="status-dot"></span><span>Đang kết nối</span></div>
+  </header>
+  <main>
+    <div class="page-heading"><div><p class="eyebrow">HADOOP MAPREDUCE / BỘ LỌC</p><h1>Lọc dữ liệu đơn hàng</h1></div><button id="toggle-config" class="secondary-button" aria-expanded="false" aria-controls="configuration"><i data-lucide="sliders-horizontal"></i>Điều kiện lọc</button><div class="heading-meta"><i data-lucide="hard-drive"></i><span>Không gian làm việc local</span></div></div>
+    <div id="notice" class="notice" role="alert" hidden></div>
+    <div class="workspace">
+      <aside class="configuration" id="configuration">
+        <div class="config-heading"><span>Cấu hình bộ lọc</span><span class="config-indicator" id="form-state">Mặc định</span></div>
+        <form id="filter-form">
+          <section class="form-section">
+            <div class="section-title"><h2><i data-lucide="database"></i>Dữ liệu đầu vào</h2><button type="button" class="icon-button" id="upload-button" title="Tải lên file CSV" aria-label="Tải lên file CSV"><i data-lucide="upload"></i></button></div>
+            <select id="dataset" hidden aria-hidden="true" tabindex="-1"><option value="">Đang tải dữ liệu…</option></select>
+            <div class="dataset-picker" id="dataset-picker">
+              <button type="button" id="dataset-trigger" class="dataset-trigger" aria-label="Bộ dữ liệu" aria-haspopup="listbox" aria-expanded="false" aria-controls="dataset-options" disabled><i data-lucide="file-spreadsheet"></i><span class="dataset-selection"><strong id="dataset-name">Đang tải dữ liệu…</strong><small id="dataset-size"></small></span><i data-lucide="chevron-down" class="picker-arrow"></i></button>
+              <div class="dataset-menu" id="dataset-options" role="listbox" aria-label="Bộ dữ liệu đầu vào" hidden></div>
+            </div>
+            <div class="dataset-meta" id="dataset-meta">—</div>
+            <input type="file" id="file-input" accept=".csv,text/csv" hidden>
+          </section>
+          <section class="form-section">
+            <div class="section-title"><h2><span class="step-number">01</span>Điều kiện từng đơn</h2><span class="stage-label">MAP</span></div>
+            <fieldset><legend>Giá trị đơn hàng <span class="unit">VND</span></legend><div class="pair">
+              <label>Từ<input id="min-amount" name="min_amount" type="number" min="0" step="0.01" value="500000" required></label>
+              <label>Đến<input id="max-amount" name="max_amount" type="number" min="0" step="0.01" value="2000000" required></label>
+            </div><div class="money-preview" id="amount-preview"></div></fieldset>
+            <fieldset><legend>Ngày đặt hàng</legend><div class="pair">
+              <label>Từ ngày<input id="start-date" name="start_date" type="date" value="2026-09-01" required></label>
+              <label>Đến ngày<input id="end-date" name="end_date" type="date" value="2026-09-30" required></label>
+            </div></fieldset>
+            <fieldset><legend>Loại sản phẩm <span class="logic">OR</span></legend><div class="check-list" id="categories"></div></fieldset>
+            <fieldset><legend>Trạng thái đơn <span class="logic">OR</span></legend><div class="check-list" id="statuses"></div></fieldset>
+          </section>
+          <section class="form-section">
+            <div class="section-title"><h2><span class="step-number reduce-number">02</span>Nhóm khách hàng</h2><span class="stage-label">REDUCE</span></div>
+            <div class="pair group-pair">
+              <label><span>Số đơn qua Map tối thiểu</span><input id="min-orders" name="min_orders" type="number" min="1" max="2147483647" step="1" value="3" required></label>
+              <label><span>Tổng tiền sau Map tối thiểu <span class="unit">VND</span></span><input id="min-total" name="min_total" type="number" min="0" step="0.01" value="3000000" required></label>
+            </div>
+            <div class="money-preview" id="total-preview"></div>
+          </section>
+          <div class="form-actions"><button type="button" id="reset" class="icon-button" title="Khôi phục điều kiện mặc định" aria-label="Khôi phục điều kiện mặc định"><i data-lucide="rotate-ccw"></i></button><button type="submit" class="primary-button" id="run"><i data-lucide="play"></i><span>Chạy bộ lọc</span></button></div>
+        </form>
+      </aside>
+      <div class="main-content">
+        <div class="result-heading"><div><h2 id="result-title">Đơn hàng mẫu</h2><p id="result-subtitle">Dữ liệu đầu vào</p></div><div class="result-actions"><button id="cancel" class="danger-button" hidden><i data-lucide="square"></i>Hủy job</button><a id="download" class="secondary-button" hidden><i data-lucide="download"></i>Tải CSV</a><button id="refresh" class="icon-button" title="Làm mới dữ liệu" aria-label="Làm mới dữ liệu"><i data-lucide="refresh-cw"></i></button></div></div>
+        <div class="metrics" id="metrics">
+          <div class="metric"><span><i data-lucide="database"></i>Đầu vào</span><strong id="metric-input">—</strong><small>bản ghi</small></div>
+          <div class="metric"><span><i data-lucide="filter"></i>Qua Map</span><strong id="metric-map">—</strong><small>đạt điều kiện từng đơn</small></div>
+          <div class="metric metric-highlight"><span><i data-lucide="circle-check"></i>Đầu ra</span><strong id="metric-output">—</strong><small>đạt cả hai bước lọc</small></div>
+          <div class="metric"><span><i data-lucide="timer"></i>Thời gian job</span><strong id="metric-time">—</strong><small>giây</small></div>
+        </div>
+        <div class="run-state" id="run-state" hidden><div class="run-state-label"><span id="job-status"></span><span id="job-progress"></span></div><div class="progress-track"><div id="progress-fill"></div></div><div class="pipeline"><span id="stage-map"><i data-lucide="filter"></i>Map</span><i data-lucide="chevron-right"></i><span id="stage-reduce"><i data-lucide="layers"></i>Reduce</span><i data-lucide="chevron-right"></i><span id="stage-verify"><i data-lucide="shield-check"></i>Đối chiếu</span></div><div id="verification" class="verification"></div></div>
+        <details id="run-rules" class="run-rules" hidden><summary>Điều kiện của lần chạy</summary><div id="run-rules-content"></div></details>
+        <div class="tabs-row"><div class="tabs" role="tablist" aria-label="Chi tiết dữ liệu">
+          <button role="tab" id="tab-input" aria-controls="panel-input" aria-selected="true" data-tab="input"><i data-lucide="table-2"></i>Đầu vào</button>
+          <button role="tab" id="tab-results" aria-controls="panel-results" aria-selected="false" tabindex="-1" data-tab="results"><i data-lucide="list-checks"></i>Kết quả</button>
+          <button role="tab" id="tab-stats" aria-controls="panel-stats" aria-selected="false" tabindex="-1" data-tab="stats"><i data-lucide="chart-no-axes-combined"></i>Thống kê</button>
+          <button role="tab" id="tab-log" aria-controls="panel-log" aria-selected="false" tabindex="-1" data-tab="log"><i data-lucide="terminal"></i>Log</button>
+        </div></div>
+        <section id="panel-input" role="tabpanel" aria-labelledby="tab-input" class="table-panel">
+          <div class="table-tools"><label class="search"><i data-lucide="search"></i><input id="input-search" type="search" placeholder="Tìm trong dữ liệu" aria-label="Tìm trong dữ liệu đầu vào"></label><span id="input-count" class="row-count"></span></div>
+          <div class="table-scroll"><table><thead><tr><th>Mã đơn</th><th>Khách hàng</th><th>Ngày đặt</th><th class="numeric">Giá trị (VND)</th><th>Loại sản phẩm</th><th>Trạng thái</th></tr></thead><tbody id="input-body"></tbody></table></div>
+          <div class="table-footer"><span id="input-range"></span><div class="pager"><button class="icon-button" id="input-prev" aria-label="Trang đầu vào trước" title="Trang trước"><i data-lucide="chevron-left"></i></button><span id="input-page"></span><button class="icon-button" id="input-next" aria-label="Trang đầu vào sau" title="Trang sau"><i data-lucide="chevron-right"></i></button></div></div>
+        </section>
+        <section id="panel-results" role="tabpanel" aria-labelledby="tab-results" class="table-panel" hidden>
+          <div class="table-tools"><label class="search"><i data-lucide="search"></i><input id="results-search" type="search" placeholder="Tìm trong kết quả" aria-label="Tìm trong kết quả"></label><span id="results-count" class="row-count"></span></div>
+          <div class="table-scroll"><table><thead><tr><th>Mã đơn</th><th>Khách hàng</th><th>Ngày đặt</th><th class="numeric">Giá trị (VND)</th><th>Loại sản phẩm</th><th>Trạng thái</th></tr></thead><tbody id="results-body"></tbody></table></div>
+          <div class="table-footer"><span id="results-range"></span><div class="pager"><button class="icon-button" id="results-prev" aria-label="Trang kết quả trước" title="Trang trước"><i data-lucide="chevron-left"></i></button><span id="results-page"></span><button class="icon-button" id="results-next" aria-label="Trang kết quả sau" title="Trang sau"><i data-lucide="chevron-right"></i></button></div></div>
+        </section>
+        <section id="panel-stats" role="tabpanel" aria-labelledby="tab-stats" class="stats-panel" hidden><div id="stats-content"></div></section>
+        <section id="panel-log" role="tabpanel" aria-labelledby="tab-log" class="log-panel" hidden><div class="log-tools"><span id="log-caption">Log Hadoop</span><a id="download-log" class="icon-button" title="Tải log đầy đủ" aria-label="Tải log đầy đủ" hidden><i data-lucide="download"></i></a></div><pre id="job-log">Chưa có lần chạy.</pre></section>
+        <section class="history" id="history-section"><div class="section-title"><h2><i data-lucide="history"></i>Lịch sử chạy</h2><span id="history-count" class="row-count">0 lần chạy</span></div><div id="history-list"></div></section>
+      </div>
+    </div>
+    <footer><span>Bài 20 · Lọc dữ liệu theo điều kiện</span><span id="footer-status">Hadoop Standalone</span></footer>
+  </main>
+  <div id="toast" role="status" hidden></div>
+  <dialog id="record-dialog" aria-labelledby="record-title"><div class="dialog-heading"><div><p class="eyebrow">BẢN GHI ĐƠN HÀNG</p><h2 id="record-title">Chi tiết bản ghi</h2></div><button id="close-record" class="icon-button" aria-label="Đóng chi tiết" title="Đóng"><i data-lucide="x"></i></button></div><div id="record-content"></div></dialog>
+</body>
+</html>
